@@ -5,11 +5,13 @@ import { AboutSection } from "@/components/AboutSection";
 import { NewConstructions } from "@/components/NewConstructions";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Footer } from "@/components/Footer";
+import { WhatsAppBubble } from "@/components/WhatsAppBubble";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <WhatsAppBubble />
       <main>
         <HeroSection />
         <FeaturedListings />
