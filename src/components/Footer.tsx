@@ -1,0 +1,148 @@
+import { FacebookIcon, YoutubeIcon, InstagramIcon, LinkedinIcon } from "./icons";
+import Image from "next/image";
+import Link from "next/link";
+
+export function Footer() {
+  return (
+    <footer className="bg-[#333] text-white pt-8 pb-4">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Top section */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+          {/* Left column: branding + contact */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-4">
+              <div>
+                <h2 className="text-[20px] font-heading text-white">
+                  Realtor Ramon Rodriguez
+                </h2>
+                <p className="text-[14px] text-white">
+                  Coach de Real Estate - Broker Associate
+                </p>
+              </div>
+              <div className="h-10 w-px bg-white/30" />
+              <Image
+                src="/images/logo-avanti-white.png"
+                alt="Avanti Way"
+                width={80}
+                height={30}
+                className="object-contain"
+              />
+            </div>
+
+            {/* Contact info */}
+            <div className="space-y-1 text-[14px]">
+              <p>
+                <Link href="tel:+13054975435" className="hover:underline">
+                  +1(305) 497-5435
+                </Link>
+              </p>
+              <p>
+                <Link href="mailto:ramon@avantiway.com" className="hover:underline">
+                  ramon@avantiway.com
+                </Link>
+              </p>
+              <p>8400 NW 33rd St, Unit 104, Doral, FL 33139</p>
+            </div>
+
+            {/* Social icons */}
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <YoutubeIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <InstagramIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal text */}
+        <div className="mt-8 border-t border-white/10 pt-4">
+          <p className="text-[12px] text-white/60 leading-relaxed">
+            Realtor Ramon Rodriguez is a real estate agent affiliated with Avanti
+            way. Avanti way is a licensed real estate broker and abides by equal
+            housing opportunity laws. All material presented herein is intended
+            for informational purposes only. Information is compiled from sources
+            deemed reliable but is subject to errors, omissions, changes in
+            price, condition, sale, or withdrawal without notice. No statement is
+            made as to accuracy of any description. All measurements and square
+            footages are approximate. This is not intended to solicit properties
+            already listed. Nothing herein shall be construed as legal,
+            accounting or other professional advice outside the realm of real
+            estate brokerage.
+          </p>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-4 border-t border-white/10 pt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[12px]">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/logo-tremgroup-150x18.svg"
+              alt="TREM GROUP"
+              width={150}
+              height={18}
+              className="object-contain"
+            />
+            <span className="text-white/60">
+              Powered by{" "}
+              <Link
+                href="https://www.tremgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                The Real Estate Marketing Group
+              </Link>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2 text-white/60">
+            <Link href="/terms" className="hover:text-white">
+              Terms &amp; Conditions
+            </Link>
+            <span>|</span>
+            <Link href="/privacy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link href="/accessibility" className="hover:text-white">
+              Accessibility
+            </Link>
+            <span>|</span>
+            <span>&copy; 2026 All Rights Reserved</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
