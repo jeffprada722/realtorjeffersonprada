@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon } from "./icons";
+import { FacebookIcon, YoutubeIcon, InstagramIcon } from "./icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -54,6 +54,15 @@ export function Footer() {
                 className="hover:opacity-70 transition-opacity"
               >
                 <FacebookIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@realtorjeffersonprada"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <YoutubeIcon className="w-5 h-5" />
               </Link>
               <Link
                 href="https://www.instagram.com/realtor.jeffersonprada/"

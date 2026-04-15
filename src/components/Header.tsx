@@ -24,6 +24,11 @@ const SOCIAL_LINKS = [
     Icon: FacebookIcon,
   },
   {
+    href: "https://www.youtube.com/@realtorjeffersonprada",
+    label: "YouTube",
+    Icon: YoutubeIcon,
+  },
+  {
     href: "https://www.instagram.com/realtor.jeffersonprada/",
     label: "Instagram",
     Icon: InstagramIcon,
