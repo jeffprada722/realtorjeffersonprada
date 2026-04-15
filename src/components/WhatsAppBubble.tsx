@@ -27,12 +27,12 @@ export function WhatsAppBubble() {
       </div>
 
       {/* Expanding wave rings */}
-      <span className="absolute inset-[-8px] rounded-full bg-[#25D366]/30 animate-[wa-ping_2s_ease-out_infinite]" />
-      <span className="absolute inset-[-4px] rounded-full bg-[#25D366]/20 animate-[wa-ping_2s_ease-out_0.4s_infinite]" />
-      <span className="absolute inset-0 rounded-full bg-[#25D366]/15 animate-[wa-ping_2s_ease-out_0.8s_infinite]" />
+      <span className="absolute inset-[-8px] rounded-full bg-[#333]/30 animate-[wa-ping_2s_ease-out_infinite]" />
+      <span className="absolute inset-[-4px] rounded-full bg-[#333]/20 animate-[wa-ping_2s_ease-out_0.4s_infinite]" />
+      <span className="absolute inset-0 rounded-full bg-[#333]/15 animate-[wa-ping_2s_ease-out_0.8s_infinite]" />
 
       {/* Button */}
-      <div className="relative w-[60px] h-[60px] rounded-full bg-gradient-to-br from-[#25D366] via-[#128C7E] to-[#075E54] shadow-[0_4px_24px_rgba(37,211,102,0.5)] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_6px_35px_rgba(37,211,102,0.7)]">
+      <div className="relative w-[60px] h-[60px] rounded-full bg-[#333] shadow-[0_4px_24px_rgba(51,51,51,0.5)] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_6px_35px_rgba(51,51,51,0.7)]">
         {/* Subtle border */}
         <div className="absolute inset-0 rounded-full border border-white/20" />
 
