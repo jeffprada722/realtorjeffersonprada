@@ -71,6 +71,18 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll position for transparent/solid header
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 80);
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -87,8 +99,8 @@ export function Header() {
     <header
       className="fixed top-0 left-0 w-full z-[32] transition-all duration-[400ms]"
       style={{
-        background: "rgb(51, 51, 51)",
-        boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 6px -6px",
+        background: scrolled ? "rgb(51, 51, 51)" : "transparent",
+        boxShadow: scrolled ? "rgba(0, 0, 0, 0.1) 0px 8px 6px -6px" : "none",
       }}
     >
       {/* ---- Row 1: TopBar ---- */}
