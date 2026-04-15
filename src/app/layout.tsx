@@ -21,20 +21,20 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Ramon Rodriguez",
+  title: "Jefferson Prada - Real Estate Agent",
   description:
-    "es un experimentado agente de bienes raices, coach y Branch Manager en Avanti Way, especializado en el mercado de Miami e internacionalmente.",
+    "Jefferson Prada is a Real Estate Agent with Avanti Way, specializing in the South Florida market. Helping buyers, sellers, and investors navigate Miami real estate.",
   openGraph: {
-    title: "Ramon Rodriguez",
+    title: "Jefferson Prada - Real Estate Agent",
     description:
-      "es un experimentado agente de bienes raices, coach y Branch Manager en Avanti Way, especializado en el mercado de Miami e internacionalmente.",
+      "Jefferson Prada is a Real Estate Agent with Avanti Way, specializing in the South Florida market. Helping buyers, sellers, and investors navigate Miami real estate.",
     images: ["/seo/og-image.png"],
-    siteName: "Ramon Rodriguez",
+    siteName: "Jefferson Prada Real Estate",
   },
   twitter: {
-    title: "Ramon Rodriguez",
+    title: "Jefferson Prada - Real Estate Agent",
     description:
-      "es un experimentado agente de bienes raices, coach y Branch Manager en Avanti Way, especializado en el mercado de Miami e internacionalmente.",
+      "Jefferson Prada is a Real Estate Agent with Avanti Way, specializing in the South Florida market. Helping buyers, sellers, and investors navigate Miami real estate.",
     images: ["/seo/og-image.png"],
   },
   icons: {

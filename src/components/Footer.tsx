@@ -1,4 +1,4 @@
-import { FacebookIcon, YoutubeIcon, InstagramIcon, LinkedinIcon } from "./icons";
+import { FacebookIcon, InstagramIcon } from "./icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,10 +13,10 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <div>
                 <h2 className="text-[20px] font-heading text-white">
-                  Realtor Ramon Rodriguez
+                  Jefferson Prada
                 </h2>
                 <p className="text-[14px] text-white">
-                  Coach de Real Estate - Broker Associate
+                  Real Estate Agent
                 </p>
               </div>
               <div className="h-10 w-px bg-white/30" />
@@ -32,13 +32,13 @@ export function Footer() {
             {/* Contact info */}
             <div className="space-y-1 text-[14px]">
               <p>
-                <Link href="tel:+13054975435" className="hover:underline">
-                  +1(305) 497-5435
+                <Link href="tel:+17866166307" className="hover:underline">
+                  +1(786) 616-6307
                 </Link>
               </p>
               <p>
-                <Link href="mailto:ramon@avantiway.com" className="hover:underline">
-                  ramon@avantiway.com
+                <Link href="mailto:info@realtorjeffersonprada.com" className="hover:underline">
+                  info@realtorjeffersonprada.com
                 </Link>
               </p>
               <p>8400 NW 33rd St, Unit 104, Doral, FL 33139</p>
@@ -47,7 +47,7 @@ export function Footer() {
             {/* Social icons */}
             <div className="flex items-center gap-4">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/realtorjeffersonprada"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -56,31 +56,13 @@ export function Footer() {
                 <FacebookIcon className="w-5 h-5" />
               </Link>
               <Link
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="hover:opacity-70 transition-opacity"
-              >
-                <YoutubeIcon className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/realtor.jeffersonprada/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="hover:opacity-70 transition-opacity"
               >
                 <InstagramIcon className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:opacity-70 transition-opacity"
-              >
-                <LinkedinIcon className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -89,7 +71,7 @@ export function Footer() {
         {/* Legal text */}
         <div className="mt-8 border-t border-white/10 pt-4">
           <p className="text-[12px] text-white/60 leading-relaxed">
-            Realtor Ramon Rodriguez is a real estate agent affiliated with Avanti
+            Jefferson Prada is a real estate agent affiliated with Avanti
             way. Avanti way is a licensed real estate broker and abides by equal
             housing opportunity laws. All material presented herein is intended
             for informational purposes only. Information is compiled from sources

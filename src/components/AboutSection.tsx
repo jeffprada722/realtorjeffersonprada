@@ -7,29 +7,26 @@ export function AboutSection() {
         <p
           className="text-[16px] italic text-[#777272] font-sans"
         >
-          Coach de Real Estate - Broker Associate
+          Real Estate Agent - Avanti Way
         </p>
 
         <h2
           className="mt-4 text-[36px] font-normal text-black font-heading"
         >
-          Realtor Ramon Rodriguez
+          Jefferson Prada
         </h2>
 
         <p className="mt-6 text-[16px] leading-[1.6] text-[#333]">
-          Es un referente en el mercado inmobiliario de Florida, reconocido por
-          su experiencia, liderazgo y compromiso con la excelencia. Experimentado
-          agente inmobiliario, Coach de Real Estate, Broker Associate y Branch
-          Manager en Avanti Way, ha construido una solida trayectoria en el
-          mercado de Miami y en inversiones internacionales. Con anos de
-          experiencia, se ha destacado por su habilidad para asesorar a
-          compradores e inversionistas en propiedades tanto locales como
-          globales. Su verdadera pasion es asesorar, brindando acompanamiento
-          estrategico para identificar oportunidades de inversion rentables y
-          guiar a sus clientes en cada paso del proceso. Ademas, es ampliamente
-          reconocido por su enfoque en el desarrollo de agentes inmobiliarios,
-          consolidando relaciones solidas y de largo plazo que lo han posicionado
-          como un verdadero lider y referente en el sector.
+          With a deep understanding of the South Florida real estate market,
+          Jefferson Prada brings dedication, local expertise, and a client-first
+          approach to every transaction. As a Real Estate Agent with Avanti Way,
+          he specializes in helping buyers, sellers, and investors navigate the
+          Miami market with confidence. Whether you are looking for your dream
+          home, an investment property, or guidance on the best opportunities in
+          the area, Jefferson provides personalized service and strategic advice
+          at every step of the process. His commitment to building lasting
+          relationships and delivering results has made him a trusted name in
+          South Florida real estate.
         </p>
 
         <div className="mt-8">

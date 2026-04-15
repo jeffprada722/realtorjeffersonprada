@@ -19,24 +19,14 @@ import {
 
 const SOCIAL_LINKS = [
   {
-    href: "https://www.facebook.com/profile.php?id=100063591249991#",
+    href: "https://www.facebook.com/realtorjeffersonprada",
     label: "Facebook",
     Icon: FacebookIcon,
   },
   {
-    href: "https://www.youtube.com/@realtorramonrodriguez1304",
-    label: "YouTube",
-    Icon: YoutubeIcon,
-  },
-  {
-    href: "https://www.instagram.com/realtor.ramonrodriguez/",
+    href: "https://www.instagram.com/realtor.jeffersonprada/",
     label: "Instagram",
     Icon: InstagramIcon,
-  },
-  {
-    href: "https://www.linkedin.com/in/ramon-alberto-rodriguez-3a5a82172/",
-    label: "LinkedIn",
-    Icon: LinkedinIcon,
   },
 ] as const;
 
@@ -150,17 +140,17 @@ export function Header() {
           {/* Right: Contact info + Login/Register */}
           <div className="flex items-center gap-4 text-[14px] font-sans">
             <a
-              href="mailto:ramon@avantiway.com"
+              href="mailto:info@realtorjeffersonprada.com"
               className="text-white hover:text-white/80 transition-colors"
             >
-              ramon@avantiway.com
+              info@realtorjeffersonprada.com
             </a>
             <span className="text-white/40">|</span>
             <a
-              href="tel:+13054975435"
+              href="tel:+17866166307"
               className="text-white hover:text-white/80 transition-colors"
             >
-              +1(305) 497-5435
+              +1(786) 616-6307
             </a>
             <span className="text-white/40">|</span>
             <button
@@ -186,10 +176,10 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex flex-col">
             <h1 className="font-heading text-white text-[18px] font-semibold leading-tight tracking-wide">
-              Realtor Ramon Rodriguez
+              Jefferson Prada
             </h1>
             <span className="text-white/70 text-[12px] font-sans leading-tight">
-              Coach de Real Estate - Broker Associate
+              Real Estate Agent
             </span>
           </Link>
           <div className="hidden sm:block ml-2">
