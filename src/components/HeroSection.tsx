@@ -19,11 +19,11 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden -mt-[100px]"
       style={{
-        height: "850px",
-        minHeight: "850px",
-        padding: "35px 0 75px",
+        height: "950px",
+        minHeight: "950px",
+        padding: "135px 0 75px",
         "--ibc-heading-color": "rgba(255,255,255,1)",
         "--ibc-section-height-desktop": "850px",
       } as React.CSSProperties}
