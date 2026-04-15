@@ -80,44 +80,20 @@ export function Footer() {
         {/* Legal text */}
         <div className="mt-8 border-t border-white/10 pt-4">
           <p className="text-[12px] text-white/60 leading-relaxed">
-            Jefferson Prada is a real estate agent affiliated with Avanti
-            way. Avanti way is a licensed real estate broker and abides by equal
-            housing opportunity laws. All material presented herein is intended
-            for informational purposes only. Information is compiled from sources
-            deemed reliable but is subject to errors, omissions, changes in
-            price, condition, sale, or withdrawal without notice. No statement is
-            made as to accuracy of any description. All measurements and square
-            footages are approximate. This is not intended to solicit properties
-            already listed. Nothing herein shall be construed as legal,
-            accounting or other professional advice outside the realm of real
-            estate brokerage.
+            Jefferson Prada is a licensed real estate agent affiliated with
+            Avanti Way. Avanti Way is a licensed real estate broker and abides
+            by equal housing opportunity laws. All material presented herein is
+            intended for informational purposes only. Information is compiled
+            from sources deemed reliable but is subject to errors, omissions,
+            changes in price, condition, sale, or withdrawal without notice. All
+            measurements and square footages are approximate. This is not
+            intended to solicit properties already listed.
           </p>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-4 border-t border-white/10 pt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[12px]">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/images/logo-tremgroup-150x18.svg"
-              alt="TREM GROUP"
-              width={150}
-              height={18}
-              className="object-contain"
-            />
-            <span className="text-white/60">
-              Powered by{" "}
-              <Link
-                href="https://www.tremgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-white"
-              >
-                The Real Estate Marketing Group
-              </Link>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 text-white/60">
+          <div className="flex items-center gap-2 text-white/60 flex-wrap">
             <Link href="/terms" className="hover:text-white">
               Terms &amp; Conditions
             </Link>
@@ -130,7 +106,7 @@ export function Footer() {
               Accessibility
             </Link>
             <span>|</span>
-            <span>&copy; 2026 All Rights Reserved</span>
+            <span>&copy; 2026 Jefferson Prada. All Rights Reserved</span>
           </div>
         </div>
       </div>

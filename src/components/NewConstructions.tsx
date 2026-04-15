@@ -18,6 +18,24 @@ const developments: Development[] = [
     image: "/images/new-constructions/mercedes-benz-places.jpg",
   },
   {
+    title: "Parkside",
+    href: "/new-development/parkside",
+    image: null,
+    gradientFallback: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+  },
+  {
+    title: "Frida Kahlo",
+    href: "/new-development/frida-kahlo",
+    image: null,
+    gradientFallback: "linear-gradient(135deg, #2d1b69 0%, #5c3d99 50%, #e91e63 100%)",
+  },
+  {
+    title: "House of Wellness Miami",
+    href: "https://houseofwellness.miami",
+    image: null,
+    gradientFallback: "linear-gradient(135deg, #0d7377 0%, #14a3a8 50%, #44c9b0 100%)",
+  },
+  {
     title: "Shoma Bay",
     href: "/new-development/shoma-bay",
     image: "/images/new-constructions/shoma-bay.jpg",
@@ -31,18 +49,6 @@ const developments: Development[] = [
     title: "Domus Brickell Center",
     href: "/new-development/domus-brickell-center",
     image: "/images/new-constructions/domus-brickell.jpg",
-  },
-  {
-    title: "Ponce Park",
-    href: "/new-development/ponce-park-coral-gables",
-    image: null,
-    gradientFallback: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-  },
-  {
-    title: "7200 Ave",
-    href: "/new-development/7200-collins",
-    image: null,
-    gradientFallback: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
   },
 ];
 
