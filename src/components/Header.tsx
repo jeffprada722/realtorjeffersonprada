@@ -142,6 +142,13 @@ export function Header() {
                         onClick={() => {
                           setCurrentLang(lang.code);
                           setLangDropdownOpen(false);
+                          const langMap: Record<string, string> = { EN: "en", ES: "es", BR: "pt" };
+                          const target = langMap[lang.code] || "en";
+                          if (target === "en") {
+                            window.location.href = window.location.pathname;
+                          } else {
+                            window.location.href = `https://translate.google.com/translate?sl=en&tl=${target}&u=${encodeURIComponent(window.location.href)}`;
+                          }
                         }}
                         className="block w-full text-left px-3 py-1.5 text-white text-[13px] font-sans hover:bg-white/10 transition-colors"
                       >
@@ -192,19 +199,20 @@ export function Header() {
         {/* Left: Brand + Avanti logo */}
         <div className="flex items-center gap-3">
           <Link href="/" className="flex flex-col">
-            <h1 className="font-heading text-white text-[18px] font-semibold leading-tight tracking-wide">
+            <h1 className="font-heading text-white text-[22px] font-semibold leading-tight tracking-wide">
               Jefferson Prada
             </h1>
-            <span className="text-white/70 text-[12px] font-sans leading-tight">
+            <span className="text-white/70 text-[13px] font-sans leading-tight">
               Real Estate Agent
             </span>
           </Link>
-          <div className="hidden sm:block ml-2">
+          <div className="hidden sm:flex items-center ml-3">
+            <div className="h-8 w-px bg-white/30 mr-3" />
             <Image
               src="/images/logo-avanti-white.png"
               alt="Avanti Way Realty"
-              width={80}
-              height={32}
+              width={110}
+              height={40}
               className="object-contain"
               priority
             />
