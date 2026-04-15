@@ -15,14 +15,14 @@ export function WhatsAppBubble() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed left-5 bottom-8 z-50 group"
+      className="fixed right-5 bottom-8 z-50 group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Tooltip */}
       <div
-        className={`absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-white text-[#333] text-sm font-sans px-4 py-2 rounded shadow-lg whitespace-nowrap transition-all duration-300 ${
-          hovered ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 pointer-events-none"
+        className={`absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-[#333] text-sm font-sans px-4 py-2 rounded shadow-lg whitespace-nowrap transition-all duration-300 ${
+          hovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 pointer-events-none"
         }`}
       >
         Chat with Jefferson
