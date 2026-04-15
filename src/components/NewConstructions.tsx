@@ -18,22 +18,19 @@ const developments: Development[] = [
     image: "/images/new-constructions/mercedes-benz-places.jpg",
   },
   {
-    title: "Parkside",
+    title: "Parkside Brickell",
     href: "/new-development/parkside",
-    image: null,
-    gradientFallback: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+    image: "/images/new-constructions/parkside.webp",
   },
   {
-    title: "Frida Kahlo",
+    title: "Frida Kahlo Wynwood",
     href: "/new-development/frida-kahlo",
-    image: null,
-    gradientFallback: "linear-gradient(135deg, #2d1b69 0%, #5c3d99 50%, #e91e63 100%)",
+    image: "/images/new-constructions/frida-kahlo.png",
   },
   {
     title: "House of Wellness Miami",
     href: "https://houseofwellness.miami",
-    image: null,
-    gradientFallback: "linear-gradient(135deg, #0d7377 0%, #14a3a8 50%, #44c9b0 100%)",
+    image: "/images/new-constructions/house-of-wellness.jpg",
   },
   {
     title: "Shoma Bay",
@@ -66,7 +63,7 @@ function DevelopmentCard({ development }: { development: Development }) {
   return (
     <Link
       href={development.href}
-      className="relative block w-full aspect-video overflow-hidden group"
+      className="relative block w-full aspect-[4/3] overflow-hidden group"
     >
       <div className="absolute inset-0" style={backgroundStyle} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
