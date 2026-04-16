@@ -177,19 +177,12 @@ export function Header() {
               +1(786) 616-6307
             </a>
             <span className="text-white/40">|</span>
-            <button
-              type="button"
-              className="text-white hover:text-white/80 transition-colors"
-            >
-              Login
-            </button>
-            <span className="text-white/40">/</span>
-            <button
-              type="button"
+            <Link
+              href="/register"
               className="text-white hover:text-white/80 transition-colors"
             >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       </div>
