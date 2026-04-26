@@ -302,16 +302,16 @@ export function Header() {
           {/* Contact info (mobile) */}
           <div className="flex flex-col items-center gap-2 mt-6 text-[14px] font-sans">
             <a
-              href="mailto:ramon@avantiway.com"
+              href="mailto:info@realtorjeffersonprada.com"
               className="text-white/80 hover:text-white transition-colors"
             >
-              ramon@avantiway.com
+              info@realtorjeffersonprada.com
             </a>
             <a
-              href="tel:+13054975435"
+              href="tel:+17866166307"
               className="text-white/80 hover:text-white transition-colors"
             >
-              +1(305) 497-5435
+              +1(786) 616-6307
             </a>
           </div>
         </div>

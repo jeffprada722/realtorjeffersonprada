@@ -319,7 +319,7 @@ export function FeaturedListings() {
         {/* View All button */}
         <div className="mt-8 flex justify-center">
           <Link
-            href="/exclusive-listings"
+            href="/featured-listings"
             className="inline-block w-[230px] bg-[#333] px-6 py-4 text-center font-button text-base text-white transition-colors hover:bg-[#444]"
             style={{ border: "1px solid #333" }}
           >
