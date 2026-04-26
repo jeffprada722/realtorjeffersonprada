@@ -1,14 +1,18 @@
+import Link from "next/link";
+
 export function CtaBanner() {
   return (
-    <section className="relative flex items-center bg-[#333] h-[297px]">
-      <div className="absolute inset-0 bg-[#333]" />
-      <div className="relative z-10 pl-10 md:pl-20 pr-6">
-        <p className="text-white text-[36px] md:text-[50px] font-normal font-sans leading-tight">
-          Turning Listings Into Landmarks,
+    <section className="bg-[#333] py-12 px-6 md:px-20">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <p className="text-white text-[26px] md:text-[34px] font-heading font-normal leading-snug max-w-xl">
+          Strategy before emotion. Numbers before assumptions.
         </p>
-        <p className="text-white text-[26px] md:text-[48px] font-normal font-sans leading-tight">
-          One Home at a Time.
-        </p>
+        <Link
+          href="/contact"
+          className="shrink-0 border border-white text-white px-8 py-3 text-[14px] font-sans hover:bg-white hover:text-[#333] transition-colors"
+        >
+          Let&apos;s Talk
+        </Link>
       </div>
     </section>
   );
