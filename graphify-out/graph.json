@@ -9,7 +9,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/postcss.config.mjs",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_postcss_config_mjs",
-      "community": 27,
+      "community": 30,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/next-env.d.ts",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_next_env_d_ts",
-      "community": 28,
+      "community": 31,
       "norm_label": "next-env.d.ts"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/eslint.config.mjs",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_eslint_config_mjs",
-      "community": 29,
+      "community": 32,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/next.config.ts",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_next_config_ts",
-      "community": 30,
+      "community": 33,
       "norm_label": "next.config.ts"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/download-assets.mjs",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_scripts_download_assets_mjs",
-      "community": 8,
+      "community": 10,
       "norm_label": "download-assets.mjs"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/download-assets.mjs",
       "source_location": "L60",
       "id": "download_assets_download",
-      "community": 8,
+      "community": 10,
       "norm_label": "download()"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/download-assets.mjs",
       "source_location": "L88",
       "id": "download_assets_main",
-      "community": 8,
+      "community": 10,
       "norm_label": "main()"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/sync-skills.mjs",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_scripts_sync_skills_mjs",
-      "community": 9,
+      "community": 11,
       "norm_label": "sync-skills.mjs"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/sync-skills.mjs",
       "source_location": "L38",
       "id": "sync_skills_write",
-      "community": 9,
+      "community": 11,
       "norm_label": "write()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/scripts/sync-skills.mjs",
       "source_location": "L49",
       "id": "sync_skills_noargs",
-      "community": 9,
+      "community": 11,
       "norm_label": "noargs()"
     },
     {
@@ -99,8 +99,44 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/types/index.ts",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_types_index_ts",
-      "community": 31,
+      "community": 34,
       "norm_label": "index.ts"
+    },
+    {
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/robots.ts",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_app_robots_ts",
+      "community": 16,
+      "norm_label": "robots.ts"
+    },
+    {
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/robots.ts",
+      "source_location": "L5",
+      "id": "robots_robots",
+      "community": 16,
+      "norm_label": "robots()"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/sitemap.ts",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_app_sitemap_ts",
+      "community": 2,
+      "norm_label": "sitemap.ts"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/sitemap.ts",
+      "source_location": "L6",
+      "id": "sitemap_sitemap",
+      "community": 2,
+      "norm_label": "sitemap()"
     },
     {
       "label": "layout.tsx",
@@ -108,16 +144,16 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/layout.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_layout_tsx",
-      "community": 15,
+      "community": 17,
       "norm_label": "layout.tsx"
     },
     {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/layout.tsx",
-      "source_location": "L93",
+      "source_location": "L95",
       "id": "layout_rootlayout",
-      "community": 15,
+      "community": 17,
       "norm_label": "rootlayout()"
     },
     {
@@ -126,7 +162,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/page.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_page_tsx",
-      "community": 16,
+      "community": 18,
       "norm_label": "page.tsx"
     },
     {
@@ -135,7 +171,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/page.tsx",
       "source_location": "L10",
       "id": "page_home",
-      "community": 16,
+      "community": 18,
       "norm_label": "home()"
     },
     {
@@ -144,7 +180,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/privacy/page.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_privacy_page_tsx",
-      "community": 17,
+      "community": 19,
       "norm_label": "page.tsx"
     },
     {
@@ -153,7 +189,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/privacy/page.tsx",
       "source_location": "L3",
       "id": "page_privacypage",
-      "community": 17,
+      "community": 19,
       "norm_label": "privacypage()"
     },
     {
@@ -162,8 +198,44 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/terms/page.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_terms_page_tsx",
-      "community": 32,
+      "community": 35,
       "norm_label": "page.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/page.tsx",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_app_blog_page_tsx",
+      "community": 36,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_app_blog_slug_page_tsx",
+      "community": 2,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L13",
+      "id": "page_generatestaticparams",
+      "community": 2,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L17",
+      "id": "page_generatemetadata",
+      "community": 2,
+      "norm_label": "generatemetadata()"
     },
     {
       "label": "page.tsx",
@@ -171,7 +243,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/register/page.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_register_page_tsx",
-      "community": 18,
+      "community": 20,
       "norm_label": "page.tsx"
     },
     {
@@ -180,7 +252,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/register/page.tsx",
       "source_location": "L12",
       "id": "page_handlesubmit",
-      "community": 18,
+      "community": 20,
       "norm_label": "handlesubmit()"
     },
     {
@@ -189,7 +261,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/accessibility/page.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_app_accessibility_page_tsx",
-      "community": 19,
+      "community": 21,
       "norm_label": "page.tsx"
     },
     {
@@ -198,8 +270,35 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/accessibility/page.tsx",
       "source_location": "L3",
       "id": "page_accessibilitypage",
-      "community": 19,
+      "community": 21,
       "norm_label": "accessibilitypage()"
+    },
+    {
+      "label": "miami-market-analysis-2026.ts",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/content/blog/miami-market-analysis-2026.ts",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_content_blog_miami_market_analysis_2026_ts",
+      "community": 37,
+      "norm_label": "miami-market-analysis-2026.ts"
+    },
+    {
+      "label": "JsonLd.tsx",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/JsonLd.tsx",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_components_jsonld_tsx",
+      "community": 22,
+      "norm_label": "jsonld.tsx"
+    },
+    {
+      "label": "JsonLd()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/JsonLd.tsx",
+      "source_location": "L1",
+      "id": "jsonld_jsonld",
+      "community": 22,
+      "norm_label": "jsonld()"
     },
     {
       "label": "AboutSection.tsx",
@@ -207,7 +306,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/AboutSection.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_aboutsection_tsx",
-      "community": 20,
+      "community": 23,
       "norm_label": "aboutsection.tsx"
     },
     {
@@ -216,7 +315,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/AboutSection.tsx",
       "source_location": "L4",
       "id": "aboutsection_aboutsection",
-      "community": 20,
+      "community": 23,
       "norm_label": "aboutsection()"
     },
     {
@@ -225,7 +324,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/FeaturedListings.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_featuredlistings_tsx",
-      "community": 5,
+      "community": 6,
       "norm_label": "featuredlistings.tsx"
     },
     {
@@ -234,7 +333,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/FeaturedListings.tsx",
       "source_location": "L174",
       "id": "featuredlistings_handleprevimage",
-      "community": 5,
+      "community": 6,
       "norm_label": "handleprevimage()"
     },
     {
@@ -243,7 +342,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/FeaturedListings.tsx",
       "source_location": "L180",
       "id": "featuredlistings_handlenextimage",
-      "community": 5,
+      "community": 6,
       "norm_label": "handlenextimage()"
     },
     {
@@ -252,7 +351,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/FeaturedListings.tsx",
       "source_location": "L186",
       "id": "featuredlistings_handlefavorite",
-      "community": 5,
+      "community": 6,
       "norm_label": "handlefavorite()"
     },
     {
@@ -261,7 +360,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/FeaturedListings.tsx",
       "source_location": "L276",
       "id": "featuredlistings_gotopage",
-      "community": 5,
+      "community": 6,
       "norm_label": "gotopage()"
     },
     {
@@ -270,7 +369,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/Footer.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_footer_tsx",
-      "community": 21,
+      "community": 24,
       "norm_label": "footer.tsx"
     },
     {
@@ -279,35 +378,8 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/Footer.tsx",
       "source_location": "L5",
       "id": "footer_footer",
-      "community": 21,
+      "community": 24,
       "norm_label": "footer()"
-    },
-    {
-      "label": "NewConstructions.tsx",
-      "file_type": "code",
-      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/NewConstructions.tsx",
-      "source_location": "L1",
-      "id": "users_jeffersonprada_projects_realtor_website_src_components_newconstructions_tsx",
-      "community": 10,
-      "norm_label": "newconstructions.tsx"
-    },
-    {
-      "label": "DevelopmentCard()",
-      "file_type": "code",
-      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/NewConstructions.tsx",
-      "source_location": "L98",
-      "id": "newconstructions_developmentcard",
-      "community": 10,
-      "norm_label": "developmentcard()"
-    },
-    {
-      "label": "NewConstructions()",
-      "file_type": "code",
-      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/NewConstructions.tsx",
-      "source_location": "L129",
-      "id": "newconstructions_newconstructions",
-      "community": 10,
-      "norm_label": "newconstructions()"
     },
     {
       "label": "WhatsAppBubble.tsx",
@@ -315,7 +387,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/WhatsAppBubble.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_whatsappbubble_tsx",
-      "community": 22,
+      "community": 25,
       "norm_label": "whatsappbubble.tsx"
     },
     {
@@ -324,7 +396,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/WhatsAppBubble.tsx",
       "source_location": "L7",
       "id": "whatsappbubble_whatsappbubble",
-      "community": 22,
+      "community": 25,
       "norm_label": "whatsappbubble()"
     },
     {
@@ -333,7 +405,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_icons_tsx",
-      "community": 2,
+      "community": 3,
       "norm_label": "icons.tsx"
     },
     {
@@ -342,7 +414,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L3",
       "id": "icons_facebookicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "facebookicon()"
     },
     {
@@ -351,7 +423,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L11",
       "id": "icons_youtubeicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "youtubeicon()"
     },
     {
@@ -360,7 +432,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L19",
       "id": "icons_instagramicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "instagramicon()"
     },
     {
@@ -369,7 +441,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L27",
       "id": "icons_linkedinicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "linkedinicon()"
     },
     {
@@ -378,7 +450,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L35",
       "id": "icons_searchicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "searchicon()"
     },
     {
@@ -387,7 +459,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L52",
       "id": "icons_chevronrighticon",
-      "community": 2,
+      "community": 3,
       "norm_label": "chevronrighticon()"
     },
     {
@@ -396,7 +468,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L68",
       "id": "icons_menuicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "menuicon()"
     },
     {
@@ -405,7 +477,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L87",
       "id": "icons_phoneicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "phoneicon()"
     },
     {
@@ -414,7 +486,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/icons.tsx",
       "source_location": "L95",
       "id": "icons_mailicon",
-      "community": 2,
+      "community": 3,
       "norm_label": "mailicon()"
     },
     {
@@ -423,7 +495,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/HeroSection.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_herosection_tsx",
-      "community": 33,
+      "community": 38,
       "norm_label": "herosection.tsx"
     },
     {
@@ -432,7 +504,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/Header.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_header_tsx",
-      "community": 11,
+      "community": 12,
       "norm_label": "header.tsx"
     },
     {
@@ -441,7 +513,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/Header.tsx",
       "source_location": "L65",
       "id": "header_handleclickoutside",
-      "community": 11,
+      "community": 12,
       "norm_label": "handleclickoutside()"
     },
     {
@@ -450,7 +522,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/Header.tsx",
       "source_location": "L78",
       "id": "header_handlescroll",
-      "community": 11,
+      "community": 12,
       "norm_label": "handlescroll()"
     },
     {
@@ -459,7 +531,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/CtaBanner.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_ctabanner_tsx",
-      "community": 23,
+      "community": 26,
       "norm_label": "ctabanner.tsx"
     },
     {
@@ -468,8 +540,26 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/CtaBanner.tsx",
       "source_location": "L1",
       "id": "ctabanner_ctabanner",
-      "community": 23,
+      "community": 26,
       "norm_label": "ctabanner()"
+    },
+    {
+      "label": "BlogPreview.tsx",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/BlogPreview.tsx",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_components_blogpreview_tsx",
+      "community": 2,
+      "norm_label": "blogpreview.tsx"
+    },
+    {
+      "label": "BlogPreview()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/BlogPreview.tsx",
+      "source_location": "L5",
+      "id": "blogpreview_blogpreview",
+      "community": 2,
+      "norm_label": "blogpreview()"
     },
     {
       "label": "button.tsx",
@@ -477,7 +567,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/ui/button.tsx",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_components_ui_button_tsx",
-      "community": 24,
+      "community": 27,
       "norm_label": "button.tsx"
     },
     {
@@ -486,8 +576,80 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/ui/button.tsx",
       "source_location": "L54",
       "id": "button_cn",
-      "community": 24,
+      "community": 27,
       "norm_label": "cn()"
+    },
+    {
+      "label": "schema.ts",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "community": 9,
+      "norm_label": "schema.ts"
+    },
+    {
+      "label": "articleSchema()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L36",
+      "id": "schema_articleschema",
+      "community": 9,
+      "norm_label": "articleschema()"
+    },
+    {
+      "label": "breadcrumbSchema()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L63",
+      "id": "schema_breadcrumbschema",
+      "community": 9,
+      "norm_label": "breadcrumbschema()"
+    },
+    {
+      "label": "faqSchema()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L76",
+      "id": "schema_faqschema",
+      "community": 9,
+      "norm_label": "faqschema()"
+    },
+    {
+      "label": "blog.ts",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L1",
+      "id": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "community": 2,
+      "norm_label": "blog.ts"
+    },
+    {
+      "label": "getAllPosts()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L21",
+      "id": "blog_getallposts",
+      "community": 2,
+      "norm_label": "getallposts()"
+    },
+    {
+      "label": "getPostBySlug()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L25",
+      "id": "blog_getpostbyslug",
+      "community": 2,
+      "norm_label": "getpostbyslug()"
+    },
+    {
+      "label": "getRecentPosts()",
+      "file_type": "code",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L29",
+      "id": "blog_getrecentposts",
+      "community": 2,
+      "norm_label": "getrecentposts()"
     },
     {
       "label": "utils.ts",
@@ -495,7 +657,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/utils.ts",
       "source_location": "L1",
       "id": "users_jeffersonprada_projects_realtor_website_src_lib_utils_ts",
-      "community": 25,
+      "community": 28,
       "norm_label": "utils.ts"
     },
     {
@@ -504,7 +666,7 @@
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/utils.ts",
       "source_location": "L4",
       "id": "utils_cn",
-      "community": 25,
+      "community": 28,
       "norm_label": "cn()"
     },
     {
@@ -516,7 +678,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 34,
+      "community": 39,
       "norm_label": "changelog version history",
       "id": "changelog_version_history"
     },
@@ -529,7 +691,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "multi-url clone support",
       "id": "changelog_multi_url_support"
     },
@@ -542,7 +704,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 29,
       "norm_label": "multi-platform ai agent support",
       "id": "changelog_multi_platform_agents"
     },
@@ -555,7 +717,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "ci quality gates via github actions",
       "id": "changelog_ci_quality_gates"
     },
@@ -568,7 +730,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 13,
       "norm_label": "ai website cloner template overview",
       "id": "readme_project_overview"
     },
@@ -581,7 +743,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "clone website pipeline",
       "id": "readme_clone_pipeline"
     },
@@ -594,7 +756,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "tech stack: next.js 16 + shadcn/ui + tailwind v4",
       "id": "readme_tech_stack"
     },
@@ -607,7 +769,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 29,
       "norm_label": "supported ai agent platforms",
       "id": "readme_supported_platforms"
     },
@@ -620,7 +782,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 35,
+      "community": 40,
       "norm_label": "use cases: platform migration & learning",
       "id": "readme_use_cases"
     },
@@ -633,7 +795,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "agents.md project instructions",
       "id": "agents_project_instructions"
     },
@@ -646,7 +808,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 36,
+      "community": 41,
       "norm_label": "next.js 16 breaking changes warning",
       "id": "agents_nextjs16_breaking_changes"
     },
@@ -659,7 +821,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 13,
       "norm_label": "website reverse-engineer template",
       "id": "agents_reverse_engineer_template"
     },
@@ -672,7 +834,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "parallel worktree agent strategy",
       "id": "agents_worktree_isolation"
     },
@@ -685,7 +847,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 13,
       "norm_label": "graphify integration rules",
       "id": "claude_graphify_rules"
     },
@@ -698,7 +860,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "fixed header behavior (#333 dark)",
       "id": "behaviors_header_fixed"
     },
@@ -711,7 +873,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 7,
       "norm_label": "hero video background autoplay loop",
       "id": "behaviors_hero_video"
     },
@@ -750,7 +912,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 7,
       "norm_label": "property search bar form",
       "id": "behaviors_search_bar"
     },
@@ -763,7 +925,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 42,
       "norm_label": "language selector en/es/br",
       "id": "behaviors_language_selector"
     },
@@ -776,7 +938,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "responsive breakpoints desktop/mobile",
       "id": "behaviors_responsive_breakpoints"
     },
@@ -789,7 +951,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "single-page scrolling layout architecture",
       "id": "page_topology_layout"
     },
@@ -815,7 +977,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 7,
       "norm_label": "font stack: raleway + open sans + lora",
       "id": "page_topology_font_stack"
     },
@@ -854,7 +1016,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "visual audit phase: screenshots & design tokens",
       "id": "inspection_guide_visual_audit"
     },
@@ -867,7 +1029,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "component inventory phase",
       "id": "inspection_guide_component_inventory"
     },
@@ -880,7 +1042,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 38,
+      "community": 43,
       "norm_label": "layout architecture phase",
       "id": "inspection_guide_layout_architecture"
     },
@@ -893,7 +1055,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 39,
+      "community": 44,
       "norm_label": "tech stack analysis phase",
       "id": "inspection_guide_tech_stack_analysis"
     },
@@ -919,7 +1081,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 40,
+      "community": 45,
       "norm_label": "cta tagline: turning listings into landmarks one home at a time",
       "id": "spec_cta_tagline"
     },
@@ -932,7 +1094,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "header component spec",
       "id": "spec_header"
     },
@@ -945,7 +1107,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "header topbar: social links language contact login",
       "id": "spec_header_topbar"
     },
@@ -958,7 +1120,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "header navbar: brand + avanti way logo + nav links",
       "id": "spec_header_navbar"
     },
@@ -997,7 +1159,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 7,
       "norm_label": "herosection component spec",
       "id": "spec_hero_section"
     },
@@ -1010,7 +1172,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 7,
       "norm_label": "hero search bar: 650px wide for sale/rent address input",
       "id": "spec_hero_search_bar"
     },
@@ -1023,7 +1185,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "footer component spec",
       "id": "spec_footer"
     },
@@ -1036,7 +1198,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "footer contact: phone email address doral fl",
       "id": "spec_footer_contact"
     },
@@ -1101,7 +1263,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "original vs clone side-by-side comparison screenshot",
       "id": "comparison_screenshot"
     },
@@ -1114,7 +1276,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "target site desktop full-page screenshot 1440px",
       "id": "desktop_fullpage_screenshot"
     },
@@ -1127,7 +1289,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "target site mobile full-page screenshot 390px",
       "id": "mobile_fullpage_screenshot"
     },
@@ -1140,7 +1302,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 4,
       "norm_label": "cloned site desktop full-page screenshot",
       "id": "clone_desktop_screenshot"
     },
@@ -1153,7 +1315,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 5,
       "norm_label": "realtor realtor/realtors logo white svg brand asset",
       "id": "logo_realtor_white_svg"
     },
@@ -1166,7 +1328,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "trem group logo svg blue gradient brand asset",
       "id": "logo_tremgroup_svg"
     },
@@ -1179,7 +1341,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "avanti way logo white png brand asset",
       "id": "logo_avanti_white"
     },
@@ -1192,7 +1354,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "professional headshot photo man in navy blazer",
       "id": "headshot_jefferson"
     },
@@ -1244,7 +1406,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "nomad wynwood mixed-use rendering street-level retail",
       "id": "newcon_nomad_wynwood"
     },
@@ -1283,7 +1445,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "the rider residences wynwood street-art rendering",
       "id": "newcon_rider_residences"
     },
@@ -1361,7 +1523,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "frida kahlo tower mid-rise mixed rendering mural facade",
       "id": "newcon_frida_kahlo"
     },
@@ -1387,7 +1549,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "og image realtor ramon rodriguez professional headshot",
       "id": "seo_og_image"
     },
@@ -1400,7 +1562,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "favicon avanti way logo icon",
       "id": "seo_favicon"
     },
@@ -1470,8 +1632,44 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/robots.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_app_robots_ts",
+      "_tgt": "robots_robots",
+      "source": "users_jeffersonprada_projects_realtor_website_src_app_robots_ts",
+      "target": "robots_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/sitemap.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_app_sitemap_ts",
+      "_tgt": "sitemap_sitemap",
+      "source": "users_jeffersonprada_projects_realtor_website_src_app_sitemap_ts",
+      "target": "sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/sitemap.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "sitemap_sitemap",
+      "_tgt": "blog_getallposts",
+      "source": "sitemap_sitemap",
+      "target": "blog_getallposts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/layout.tsx",
-      "source_location": "L93",
+      "source_location": "L95",
       "weight": 1.0,
       "_src": "users_jeffersonprada_projects_realtor_website_src_app_layout_tsx",
       "_tgt": "layout_rootlayout",
@@ -1506,6 +1704,54 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_app_blog_slug_page_tsx",
+      "_tgt": "page_generatestaticparams",
+      "source": "users_jeffersonprada_projects_realtor_website_src_app_blog_slug_page_tsx",
+      "target": "page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_app_blog_slug_page_tsx",
+      "_tgt": "page_generatemetadata",
+      "source": "users_jeffersonprada_projects_realtor_website_src_app_blog_slug_page_tsx",
+      "target": "page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "page_generatestaticparams",
+      "_tgt": "blog_getallposts",
+      "source": "page_generatestaticparams",
+      "target": "blog_getallposts"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/blog/[slug]/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "page_generatemetadata",
+      "_tgt": "blog_getpostbyslug",
+      "source": "page_generatemetadata",
+      "target": "blog_getpostbyslug"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/app/register/page.tsx",
       "source_location": "L12",
       "weight": 1.0,
@@ -1525,6 +1771,18 @@
       "_tgt": "page_accessibilitypage",
       "source": "users_jeffersonprada_projects_realtor_website_src_app_accessibility_page_tsx",
       "target": "page_accessibilitypage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/JsonLd.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_components_jsonld_tsx",
+      "_tgt": "jsonld_jsonld",
+      "source": "users_jeffersonprada_projects_realtor_website_src_components_jsonld_tsx",
+      "target": "jsonld_jsonld",
       "confidence_score": 1.0
     },
     {
@@ -1597,30 +1855,6 @@
       "_tgt": "footer_footer",
       "source": "users_jeffersonprada_projects_realtor_website_src_components_footer_tsx",
       "target": "footer_footer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/NewConstructions.tsx",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_src": "users_jeffersonprada_projects_realtor_website_src_components_newconstructions_tsx",
-      "_tgt": "newconstructions_developmentcard",
-      "source": "users_jeffersonprada_projects_realtor_website_src_components_newconstructions_tsx",
-      "target": "newconstructions_developmentcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/NewConstructions.tsx",
-      "source_location": "L129",
-      "weight": 1.0,
-      "_src": "users_jeffersonprada_projects_realtor_website_src_components_newconstructions_tsx",
-      "_tgt": "newconstructions_newconstructions",
-      "source": "users_jeffersonprada_projects_realtor_website_src_components_newconstructions_tsx",
-      "target": "newconstructions_newconstructions",
       "confidence_score": 1.0
     },
     {
@@ -1782,6 +2016,30 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/BlogPreview.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_components_blogpreview_tsx",
+      "_tgt": "blogpreview_blogpreview",
+      "source": "users_jeffersonprada_projects_realtor_website_src_components_blogpreview_tsx",
+      "target": "blogpreview_blogpreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/BlogPreview.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "blogpreview_blogpreview",
+      "_tgt": "blog_getrecentposts",
+      "source": "blogpreview_blogpreview",
+      "target": "blog_getrecentposts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/components/ui/button.tsx",
       "source_location": "L54",
       "weight": 1.0,
@@ -1789,6 +2047,90 @@
       "_tgt": "button_cn",
       "source": "users_jeffersonprada_projects_realtor_website_src_components_ui_button_tsx",
       "target": "button_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "_tgt": "schema_articleschema",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "target": "schema_articleschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "_tgt": "schema_breadcrumbschema",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "target": "schema_breadcrumbschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/schema.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "_tgt": "schema_faqschema",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_schema_ts",
+      "target": "schema_faqschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "_tgt": "blog_getallposts",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "target": "blog_getallposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "_tgt": "blog_getpostbyslug",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "target": "blog_getpostbyslug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "_tgt": "blog_getrecentposts",
+      "source": "users_jeffersonprada_projects_realtor_website_src_lib_blog_ts",
+      "target": "blog_getrecentposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/jeffersonprada/Projects/realtor-website/src/lib/blog.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "blog_getrecentposts",
+      "_tgt": "blog_getallposts",
+      "source": "blog_getallposts",
+      "target": "blog_getrecentposts",
       "confidence_score": 1.0
     },
     {
