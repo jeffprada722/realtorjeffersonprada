@@ -92,7 +92,8 @@ export default function DMCAPage() {
             <p>
               Jefferson Alberto Prada Camacho is registered as the Designated
               Copyright Agent in the U.S. Copyright Office DMCA Designated
-              Agent Directory (registered April 26, 2026).
+              Agent Directory (registration number DMCA-1071960, effective
+              April 26, 2026).
             </p>
             <div className="bg-[#f5f5f5] border border-[#e5e5e5] p-6 rounded-sm">
               <p className="font-semibold text-[#333]">Jefferson Prada</p>
@@ -103,10 +104,10 @@ export default function DMCAPage() {
               <p className="mt-3">
                 Email:{" "}
                 <Link
-                  href="mailto:dmca@realtorjeffersonprada.com"
+                  href="mailto:info@realtorjeffersonprada.com"
                   className="underline"
                 >
-                  dmca@realtorjeffersonprada.com
+                  info@realtorjeffersonprada.com
                 </Link>
               </p>
               <p>
