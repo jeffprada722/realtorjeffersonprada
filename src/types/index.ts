@@ -11,6 +11,10 @@ export interface PropertyListing {
   imageUrl: string;
   detailUrl?: string;
   status?: "Pending" | "new listing" | "Active Under Contract";
+  /** IDX compliance: name of the listing brokerage if not Avanti Way Realty */
+  listingCourtesy?: string;
+  /** MLS listing number */
+  mlsNumber?: string;
 }
 
 export interface NewDevelopment {

@@ -57,16 +57,15 @@ export default function FeaturedListingsPage() {
         {/* Listings */}
         <FeaturedListings />
 
-        {/* IDX Disclaimer */}
+        {/* SEFMLS IDX Disclaimer — exact text required by Miami Realtors IDX Agreement */}
         <section className="px-6 pb-8">
           <div className="mx-auto max-w-6xl border-t border-[#eee] pt-6">
             <p className="text-[11px] font-sans text-[#aaa] leading-relaxed">
-              The data relating to real estate for sale on this website comes in
-              part from the MLS. The information is provided for consumers&apos;
-              personal, non-commercial use and may not be used for any purpose
-              other than to identify prospective properties consumers may be
-              interested in purchasing. All data is deemed reliable but is not
-              guaranteed accurate by the MLS.
+              Copyright Southeast Florida MLS a/k/a SEFMLS &copy; {new Date().getFullYear()}.
+              Accuracy of listing information is not guaranteed. Listing information
+              is provided for personal consumer, non-commercial use, solely to identify
+              potential properties for potential purchase. All other use is strictly
+              prohibited and may be a violation of federal and state law.
             </p>
           </div>
         </section>

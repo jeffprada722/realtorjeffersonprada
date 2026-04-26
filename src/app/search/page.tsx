@@ -287,6 +287,17 @@ export default function SearchPage() {
             </div>
           </div>
         </section>
+
+        {/* SEFMLS IDX Disclaimer — required by Miami Realtors IDX Agreement */}
+        <section className="px-6 py-6 border-t border-[#eee]">
+          <p className="mx-auto max-w-6xl text-[11px] font-sans text-[#aaa] leading-relaxed">
+            Copyright Southeast Florida MLS a/k/a SEFMLS &copy; {new Date().getFullYear()}.
+            Accuracy of listing information is not guaranteed. Listing information is provided
+            for personal consumer, non-commercial use, solely to identify potential properties
+            for potential purchase. All other use is strictly prohibited and may be a violation
+            of federal and state law.
+          </p>
+        </section>
       </main>
       <Footer />
     </>

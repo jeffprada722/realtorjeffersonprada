@@ -265,6 +265,17 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
           {listing.beds} Beds &middot; {listing.baths} Baths &middot;{" "}
           {listing.sqft.toLocaleString("en-US")} Sq.Ft.
         </p>
+        {/* IDX compliance: listing attribution (required by SEFMLS agreement) */}
+        {listing.listingCourtesy && (
+          <p className="mt-2 text-[11px] text-[#aaa] leading-snug">
+            This listing is courtesy of {listing.listingCourtesy}
+          </p>
+        )}
+        {listing.mlsNumber && (
+          <p className="mt-0.5 text-[11px] text-[#bbb]">
+            MLS# {listing.mlsNumber}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -326,6 +337,14 @@ export function FeaturedListings() {
             View All
           </Link>
         </div>
+
+        {/* SEFMLS Copyright Disclaimer — required by IDX Agreement */}
+        <p className="mt-8 text-[11px] text-[#aaa] leading-relaxed text-center max-w-3xl mx-auto">
+          Copyright Southeast Florida MLS a/k/a SEFMLS &copy; {new Date().getFullYear()}. Accuracy of listing
+          information is not guaranteed. Listing information is provided for personal consumer,
+          non-commercial use, solely to identify potential properties for potential purchase.
+          All other use is strictly prohibited and may be a violation of federal and state law.
+        </p>
       </div>
     </section>
   );
