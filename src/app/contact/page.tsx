@@ -38,7 +38,8 @@ const INTEREST_OPTIONS = [
   "Buying a Home",
   "Selling a Property",
   "Investment Properties",
-  "Pre-Construction",
+  "Pre-Construction Analysis",
+  "Rent vs. Buy Analysis",
   "Market Analysis",
   "Just Exploring",
 ];
@@ -59,8 +60,8 @@ export default function ContactPage() {
               Let&apos;s Talk
             </h1>
             <p className="mt-3 text-[17px] text-white/70 font-sans max-w-lg">
-              No pressure, no scripts. Tell me what you&apos;re working on and
-              I&apos;ll tell you honestly what makes sense.
+              No pressure, no scripts, no hidden agenda. Tell me your situation
+              and I&apos;ll tell you honestly what the numbers say.
             </p>
           </div>
         </section>

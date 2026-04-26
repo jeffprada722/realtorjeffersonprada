@@ -6,20 +6,20 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppBubble } from "@/components/WhatsAppBubble";
 
 export const metadata: Metadata = {
-  title: "About Jefferson Prada | Miami Realtor & Financial Strategist",
+  title: "About Jefferson Prada | Miami Real Estate Financial Strategist",
   description:
-    "Meet Jefferson Prada, an Economist and Real Estate Sales Associate at Avanti Way Realty. Specializing in financial analysis for Miami real estate investments in Brickell, Coral Gables, and South Florida.",
+    "Jefferson Prada is an Economist and Realtor at Avanti Way Realty Miami. He brings financial analysis — ROI, Cap Rate, cash flow — to every real estate decision. No pressure, no hidden costs, no blind decisions.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Jefferson Prada | Miami Realtor & Financial Strategist",
+    title: "About Jefferson Prada | Miami Real Estate Financial Strategist",
     description:
-      "Economist and Real Estate Sales Associate at Avanti Way Realty. Numbers-driven approach to buying, selling, and investing in Miami real estate.",
+      "Not just another Miami realtor. Jefferson Prada brings an economist's lens to every transaction — real numbers, clear strategy, no pressure.",
     images: [
       {
         url: "/images/jefferson-prada-headshot.jpg",
         width: 1024,
         height: 1024,
-        alt: "Jefferson Prada - Real Estate Agent Miami",
+        alt: "Jefferson Prada - Real Estate Financial Strategist Miami",
       },
     ],
   },
@@ -31,39 +31,64 @@ const STATS = [
   { value: "5+", label: "Years in Miami" },
 ];
 
-const SERVICES = [
+const METHOD = [
   {
-    title: "Buyers",
+    title: "Comparative Market Analysis",
     description:
-      "I run a full financial pre-analysis before you tour a single property. That means you know your real budget, the neighborhood ROI, and what a fair offer looks like before anyone negotiates.",
-    items: [
-      "Financial pre-analysis before offers",
-      "Neighborhood-by-neighborhood value comparison",
-      "Negotiation backed by comparable sales data",
-      "Full guidance from contract to closing",
-    ],
+      "Delivered in 48 hours. You know whether the price makes sense before you ever make an offer or accept one.",
   },
   {
-    title: "Sellers",
+    title: "Financial Indicators on Every Deal",
     description:
-      "Pricing a property correctly from day one is the difference between 30 days on market and 130. I use current sales data, not optimism, to set a strategy that actually gets you to the table.",
-    items: [
-      "Data-driven pricing strategy",
-      "Professional marketing with digital targeting",
-      "Qualified buyer pre-screening",
-      "Smooth coordination from listing to closing",
-    ],
+      "ROI, Cap Rate, cash flow, amortization schedule. Whether you're buying to live or buying to earn, you get the real numbers.",
   },
   {
-    title: "Investors",
+    title: "Strategic Accompaniment",
     description:
-      "I speak your language. Cap rates, cash-on-cash returns, gross rent multipliers. Whether it's a Brickell condo or a pre-construction deal, I give you the numbers before you commit.",
-    items: [
-      "Cap rate and cash-on-cash return analysis",
-      "Pre-construction risk and reward breakdown",
-      "Multi-unit and condo investment consulting",
-      "Portfolio growth strategy for South Florida",
-    ],
+      "From the first conversation to the closing table. I stay involved at every step so nothing slips through the cracks.",
+  },
+  {
+    title: "Education, Not Pressure",
+    description:
+      "You learn what the market is actually doing, what costs are actually involved, and what the right move is for your specific situation.",
+  },
+  {
+    title: "Full MLS Coverage",
+    description:
+      "Access to every active listing across Miami-Dade, Broward, and Palm Beach. No filtered feeds, no artificial limitations.",
+  },
+  {
+    title: "Pre-Construction Analysis",
+    description:
+      "Risk and reward breakdown before you commit. Developer projections are marketing. My analysis is math.",
+  },
+];
+
+const CLIENT_PROFILES = [
+  {
+    label: "First-Time Buyers",
+    description:
+      "You're making the largest financial decision of your life and you need someone who explains the numbers honestly, not someone who just wants to close a deal.",
+  },
+  {
+    label: "Sellers",
+    description:
+      "Pricing your property correctly from day one is the difference between 30 days on market and 130. Data sets the strategy, not optimism.",
+  },
+  {
+    label: "Pre-Construction Investors",
+    description:
+      "Developer projections are marketing materials. I give you an independent financial breakdown of what the deal actually looks like at closing.",
+  },
+  {
+    label: "Renters Evaluating Options",
+    description:
+      "Sometimes renting is the smarter financial move. I run the rent-vs-buy analysis honestly, even if the answer is \"keep renting for now.\"",
+  },
+  {
+    label: "Strategic Buyers",
+    description:
+      "You're already in Miami, you know the market is competitive, and you want a strategy — not a tour. We discard the unprofitable options first.",
   },
 ];
 
@@ -95,8 +120,11 @@ export default function AboutPage() {
             <h1 className="mt-3 text-[44px] md:text-[58px] font-heading font-normal leading-tight">
               Jefferson Prada
             </h1>
-            <p className="mt-2 text-[17px] text-white/70 font-sans">
-              Economist. Real Estate Sales Associate. Avanti Way Realty.
+            <p className="mt-2 text-[18px] text-white/70 font-sans">
+              Estratega Financiero Inmobiliario
+            </p>
+            <p className="mt-1 text-[14px] text-white/40 font-sans">
+              Economist &nbsp;&bull;&nbsp; Real Estate Sales Associate &nbsp;&bull;&nbsp; Avanti Way Realty
             </p>
           </div>
         </section>
@@ -105,13 +133,13 @@ export default function AboutPage() {
         <section className="py-16 px-6">
           <div className="mx-auto max-w-6xl flex flex-col md:flex-row gap-12 items-start">
             <div className="shrink-0">
-              <div className="relative w-[280px] h-[350px] md:w-[340px] md:h-[430px] overflow-hidden rounded-sm shadow-md">
+              <div className="relative w-[280px] h-[350px] md:w-[320px] md:h-[400px] overflow-hidden shadow-md">
                 <Image
                   src="/images/jefferson-prada-headshot.jpg"
-                  alt="Jefferson Prada, Real Estate Agent Miami"
+                  alt="Jefferson Prada, Real Estate Financial Strategist Miami"
                   fill
                   className="object-cover object-top"
-                  sizes="(max-width: 768px) 280px, 340px"
+                  sizes="(max-width: 768px) 280px, 320px"
                   priority
                 />
               </div>
@@ -119,10 +147,10 @@ export default function AboutPage() {
 
             <div className="max-w-2xl">
               <p className="text-[12px] font-sans uppercase tracking-[0.15em] text-[#888]">
-                Real Estate Agent &nbsp;&bull;&nbsp; Avanti Way Realty
+                Real Estate Sales Associate &nbsp;&bull;&nbsp; Avanti Way Realty
               </p>
               <h2 className="mt-3 text-[30px] font-heading font-normal text-[#222]">
-                Not just another Miami realtor.
+                Not a property shower. A financial strategist.
               </h2>
 
               <div className="mt-6 space-y-4 text-[16px] leading-[1.75] text-[#444] font-sans">
@@ -131,30 +159,25 @@ export default function AboutPage() {
                   client buy a home, I spent years studying financial markets, asset
                   valuation, and investment analysis. That background changes
                   everything about how I work. When I sit across from a buyer or a
-                  seller, I'm not guessing. I'm running numbers.
+                  seller, I&apos;m not guessing. I&apos;m running numbers.
                 </p>
                 <p>
-                  Miami is one of the most complex markets in the world. You have
-                  international capital flowing into Brickell condos, families from
-                  the Northeast looking for space in Coral Gables, and investors
-                  hunting for cap rates in neighborhoods most agents don't know
-                  exist. I've worked in all of those segments.
+                  Most agents show properties. That&apos;s not my job. My job is to
+                  make sure every real estate decision you make has financial logic
+                  behind it: the right price, the real costs, the actual return.
+                  No pressure, no hidden costs, no decisions made in the dark.
+                </p>
+                <p>
+                  Miami is one of the most complex markets in the world. International
+                  capital flowing into Brickell condos, families from the Northeast
+                  looking for space in Coral Gables, investors hunting for cap rates
+                  in neighborhoods most agents don&apos;t follow. I&apos;ve worked
+                  in all of those segments.
                 </p>
                 <p>
                   What I tell every client from day one: a home is the largest
                   financial decision most people ever make. It deserves a strategy,
-                  not just a tour and a gut feeling. So that's what I provide.
-                </p>
-                <p>
-                  I'm licensed under Avanti Way Realty, one of the most respected
-                  brokerages in South Florida, with full access to the Miami MLS
-                  and a network that covers everything from pre-construction
-                  opportunities to off-market deals.
-                </p>
-                <p>
-                  If you want someone who backs every recommendation with data and
-                  tells you honestly when something doesn't make financial sense,
-                  call me.
+                  not just a tour and a gut feeling.
                 </p>
               </div>
 
@@ -192,43 +215,80 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Services */}
+        {/* Method */}
         <section className="py-16 px-6">
           <div className="mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[12px] font-sans uppercase tracking-[0.15em] text-[#888]">
-                How I Help
+                How I Work
               </p>
               <h2 className="mt-3 text-[32px] font-heading font-normal text-[#222]">
-                Buyers. Sellers. Investors.
+                What you get on every transaction
               </h2>
+              <p className="mt-3 text-[15px] font-sans text-[#666] max-w-lg mx-auto">
+                Six things I deliver that most agents don&apos;t offer, and that make
+                the difference between a confident decision and an expensive mistake.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {SERVICES.map(({ title, description, items }) => (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {METHOD.map(({ title, description }) => (
                 <div
                   key={title}
-                  className="border border-[#e8e8e8] p-8 hover:shadow-md transition-shadow"
+                  className="border border-[#e8e8e8] p-7 hover:shadow-sm transition-shadow"
                 >
-                  <h3 className="text-[22px] font-heading font-normal text-[#333]">
+                  <h3 className="text-[16px] font-heading font-normal text-[#333]">
                     {title}
                   </h3>
                   <p className="mt-3 text-[14px] font-sans text-[#666] leading-relaxed">
                     {description}
                   </p>
-                  <ul className="mt-5 space-y-2">
-                    {items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex gap-2 text-[14px] font-sans text-[#555] leading-snug"
-                      >
-                        <span className="text-[#999] shrink-0 mt-0.5">&#10003;</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Who I Work With */}
+        <section className="bg-[#f5f5f5] py-16 px-6">
+          <div className="mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[12px] font-sans uppercase tracking-[0.15em] text-[#888]">
+                Clients
+              </p>
+              <h2 className="mt-3 text-[32px] font-heading font-normal text-[#222]">
+                Who I work with
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {CLIENT_PROFILES.map(({ label, description }) => (
+                <div
+                  key={label}
+                  className="bg-white border border-[#e8e8e8] p-7"
+                >
+                  <h3 className="text-[15px] font-sans font-semibold text-[#333]">
+                    {label}
+                  </h3>
+                  <p className="mt-2 text-[14px] font-sans text-[#666] leading-relaxed">
+                    {description}
+                  </p>
+                </div>
+              ))}
+
+              {/* CTA card */}
+              <div className="bg-[#333] p-7 flex flex-col justify-between">
+                <p className="text-[14px] font-sans text-white/80 leading-relaxed">
+                  Not sure which category fits you? Tell me where you are and
+                  I&apos;ll tell you what makes sense.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-6 inline-flex items-center justify-center border border-white text-white px-6 py-2.5 text-[14px] font-sans hover:bg-white hover:text-[#333] transition-colors"
+                >
+                  Let&apos;s Talk
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -240,11 +300,11 @@ export default function AboutPage() {
               Coverage
             </p>
             <h2 className="mt-3 text-[30px] font-heading font-normal">
-              Neighborhoods I Know Best
+              Neighborhoods I know best
             </h2>
             <p className="mt-4 text-[15px] font-sans text-white/60 max-w-xl mx-auto">
-              I don't pretend to be an expert in every corner of Florida. These are
-              the markets I follow daily, week after week.
+              I don&apos;t pretend to be an expert in every corner of Florida. These
+              are the markets I follow daily, week after week.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {NEIGHBORHOODS.map((n) => (
@@ -281,18 +341,18 @@ export default function AboutPage() {
         <section className="py-16 px-6 text-center">
           <div className="mx-auto max-w-xl">
             <h2 className="text-[30px] font-heading font-normal text-[#333]">
-              Ready to make a move?
+              Ready to make a move that makes sense?
             </h2>
             <p className="mt-4 text-[15px] font-sans text-[#666] leading-relaxed">
-              Whether you're buying your first home, selling an investment
-              property, or exploring Miami for the first time, I'm here to walk
-              you through every step.
+              First session, we go through your situation, run the numbers, and
+              discard the options that don&apos;t work. No obligation, no pitch.
+              Just clarity.
             </p>
             <Link
               href="/contact"
               className="mt-8 inline-flex items-center justify-center bg-[#333] text-white px-10 py-4 text-[15px] font-sans hover:bg-black transition-colors"
             >
-              Get in Touch
+              Schedule a Free Strategy Call
             </Link>
           </div>
         </section>
