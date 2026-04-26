@@ -10,11 +10,40 @@ export interface PropertyListing {
   sqft: number;
   imageUrl: string;
   detailUrl?: string;
-  status?: "Pending" | "new listing" | "Active Under Contract";
+  status?: "Active" | "Pending" | "new listing" | "Active Under Contract" | "Closed";
   /** IDX compliance: name of the listing brokerage if not Avanti Way Realty */
   listingCourtesy?: string;
   /** MLS listing number */
   mlsNumber?: string;
+  /** Optional gallery (Bridge Interactive Media) */
+  photos?: string[];
+  /** Property description from MLS */
+  description?: string;
+  /** Year built */
+  yearBuilt?: number;
+  /** Lot size in sqft */
+  lotSize?: number;
+  /** Property type: Residential, Condo, Townhouse, etc. */
+  propertyType?: string;
+  /** Latitude / Longitude (for map view) */
+  latitude?: number;
+  longitude?: number;
+  /** ISO timestamp of when listing was last modified in MLS */
+  modificationTimestamp?: string;
+}
+
+/** Filters for /api/listings query */
+export interface ListingFilters {
+  type?: "sale" | "rent";
+  city?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  beds?: number;
+  baths?: number;
+  propertyType?: string;
+  keyword?: string;
+  limit?: number;
+  offset?: number;
 }
 
 export interface NewDevelopment {

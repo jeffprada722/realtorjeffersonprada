@@ -106,7 +106,15 @@ export function Footer() {
               Accessibility
             </Link>
             <span>|</span>
-            <span>&copy; 2026 Jefferson Prada. All Rights Reserved</span>
+            <Link href="/fair-housing" className="hover:text-white">
+              Fair Housing
+            </Link>
+            <span>|</span>
+            <Link href="/dmca" className="hover:text-white">
+              DMCA
+            </Link>
+            <span>|</span>
+            <span>&copy; {new Date().getFullYear()} Jefferson Prada. All Rights Reserved</span>
           </div>
         </div>
       </div>

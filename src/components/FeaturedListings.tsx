@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HeartIcon, ChevronLeftIcon, ChevronRightIcon } from "./icons";
 import type { PropertyListing } from "@/types";
 
-const LISTINGS: PropertyListing[] = [
+/**
+ * Static fallback listings — shown only while the Bridge Interactive
+ * Member Data License Agreement is pending broker signature, or if the
+ * /api/listings call fails for any reason. Once the agreement is fully
+ * executed and the API responds 200, real MLS data takes over automatically.
+ */
+const FALLBACK_LISTINGS: PropertyListing[] = [
   {
     id: "1",
     address: "16479 NE 30th Ave",
@@ -156,7 +162,6 @@ const LISTINGS: PropertyListing[] = [
 ];
 
 const CARDS_PER_PAGE_DESKTOP = 3;
-const TOTAL_PAGES = Math.ceil(LISTINGS.length / CARDS_PER_PAGE_DESKTOP);
 
 const priceFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -283,6 +288,31 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
 
 export function FeaturedListings() {
   const [currentPage, setCurrentPage] = useState(0);
+  const [listings, setListings] = useState<PropertyListing[]>(FALLBACK_LISTINGS);
+
+  // Try to fetch live MLS data from Bridge Interactive on mount.
+  // Falls back to the static FALLBACK_LISTINGS if the API is not yet active
+  // (agreement still pending broker signature) or any other error occurs.
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const res = await fetch("/api/listings?source=avanti&limit=12");
+        if (!res.ok) return;
+        const data: { listings?: PropertyListing[] } = await res.json();
+        if (cancelled || !data.listings || data.listings.length === 0) return;
+        setListings(data.listings);
+      } catch {
+        // Silent fallback. Static listings remain visible.
+      }
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const totalPages = Math.max(1, Math.ceil(listings.length / CARDS_PER_PAGE_DESKTOP));
 
   function goToPage(page: number) {
     setCurrentPage(page);
@@ -290,7 +320,7 @@ export function FeaturedListings() {
 
   // Get listings for current page (desktop: 3 per page)
   const startIndex = currentPage * CARDS_PER_PAGE_DESKTOP;
-  const visibleListings = LISTINGS.slice(
+  const visibleListings = listings.slice(
     startIndex,
     startIndex + CARDS_PER_PAGE_DESKTOP
   );
@@ -313,7 +343,7 @@ export function FeaturedListings() {
 
         {/* Pagination dots */}
         <div className="mt-8 flex items-center justify-center gap-2">
-          {Array.from({ length: TOTAL_PAGES }).map((_, index) => (
+          {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}
               type="button"
