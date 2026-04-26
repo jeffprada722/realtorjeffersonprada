@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Raleway, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema } from "@/lib/schema";
@@ -105,6 +106,18 @@ export default function RootLayout({
       <head>
         <meta name="author" content="Jefferson Alberto Prada Camacho" />
       </head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-J2CY63LX7L"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J2CY63LX7L');
+        `}
+      </Script>
       <body className="min-h-full flex flex-col font-sans">
         <JsonLd data={organizationSchema} />
         {children}
