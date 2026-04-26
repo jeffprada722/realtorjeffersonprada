@@ -1,0 +1,31 @@
+# graphify exclusions - patterns match .gitignore syntax
+node_modules/
+.next/
+.nuxt/
+out/
+dist/
+build/
+coverage/
+.turbo/
+
+# Python
+__pycache__/
+.venv/
+venv/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# env + secrets (never graph these)
+.env
+.env.*
+!.env.example
+
+# graphify own files
+graphify-out/cache/
+
+# generated/vendored
+*.generated.*
+*.min.js
+*.min.css
+vendor/

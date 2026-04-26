@@ -39,7 +39,7 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/featured-listings", label: "Featured Listings" },
   { href: "/search", label: "Search" },
-  { href: "/new-developments", label: "New Developments" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/the-avanti-way", label: "The Avanti Way" },
 ] as const;

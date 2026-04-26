@@ -1,0 +1,86 @@
+import type { BlogPost } from "./blog";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://realtorjeffersonprada.com";
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "@id": `${SITE_URL}/#agent`,
+  name: "Jefferson Prada",
+  alternateName: "Realtor Jefferson Prada",
+  url: SITE_URL,
+  image: `${SITE_URL}/images/jefferson-prada.jpg`,
+  logo: `${SITE_URL}/images/logo.png`,
+  description:
+    "Estratega financiero inmobiliario en Miami. Compra, venta e inversion en Brickell, Coral Gables, Miami Beach, Sunny Isles y Coconut Grove.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Miami",
+    addressRegion: "FL",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "City", name: "Miami" },
+    { "@type": "City", name: "Miami Beach" },
+    { "@type": "City", name: "Coral Gables" },
+    { "@type": "City", name: "Sunny Isles Beach" },
+  ],
+  sameAs: [
+    "https://www.youtube.com/@realtorjeffersonprada",
+    "https://www.instagram.com/realtorjeffersonprada",
+    "https://www.facebook.com/realtorjeffersonprada",
+  ],
+  knowsLanguage: ["en", "es", "pt"],
+};
+
+export function articleSchema(post: BlogPost) {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.title,
+    description: post.description,
+    image: `${SITE_URL}${post.heroImage}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Jefferson Prada Real Estate",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/images/logo.png` },
+    },
+    keywords: post.keywords.join(", "),
+    articleSection: post.category,
+  };
+}
+
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.url}`,
+    })),
+  };
+}
+
+export function faqSchema(faq: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}

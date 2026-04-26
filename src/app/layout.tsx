@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans, Raleway, Lora } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "@/components/JsonLd";
+import { organizationSchema } from "@/lib/schema";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -102,9 +104,11 @@ export default function RootLayout({
     >
       <head>
         <meta name="author" content="Jefferson Alberto Prada Camacho" />
-        <link rel="canonical" href="https://realtorjeffersonprada.com" />
       </head>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <JsonLd data={organizationSchema} />
+        {children}
+      </body>
     </html>
   );
 }
