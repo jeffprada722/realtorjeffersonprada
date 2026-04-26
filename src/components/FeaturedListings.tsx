@@ -5,162 +5,6 @@ import Link from "next/link";
 import { HeartIcon, ChevronLeftIcon, ChevronRightIcon } from "./icons";
 import type { PropertyListing } from "@/types";
 
-/**
- * Static fallback listings — shown only while the Bridge Interactive
- * Member Data License Agreement is pending broker signature, or if the
- * /api/listings call fails for any reason. Once the agreement is fully
- * executed and the API responds 200, real MLS data takes over automatically.
- */
-const FALLBACK_LISTINGS: PropertyListing[] = [
-  {
-    id: "1",
-    address: "16479 NE 30th Ave",
-    city: "North Miami Beach",
-    state: "FL",
-    zip: "33160",
-    price: 20500000,
-    beds: 5,
-    baths: 6,
-    sqft: 7843,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+1",
-  },
-  {
-    id: "2",
-    address: "610 Harbor Cir",
-    city: "Key Biscayne",
-    state: "FL",
-    zip: "33149",
-    price: 11300000,
-    beds: 6,
-    baths: 6,
-    sqft: 5216,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+2",
-  },
-  {
-    id: "3",
-    address: "848 Harbour Isle Pl",
-    city: "North Palm Beach",
-    state: "FL",
-    zip: "33410",
-    price: 8750000,
-    beds: 5,
-    baths: 5,
-    sqft: 4611,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+3",
-  },
-  {
-    id: "4",
-    address: "833 Harbour Isle Pl",
-    city: "North Palm Beach",
-    state: "FL",
-    zip: "33410",
-    price: 6995000,
-    beds: 4,
-    baths: 6,
-    sqft: 6777,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+4",
-  },
-  {
-    id: "5",
-    address: "79 W Shore Dr",
-    city: "Miami",
-    state: "FL",
-    zip: "33133",
-    price: 4350000,
-    beds: 4,
-    baths: 4,
-    sqft: 3718,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+5",
-  },
-  {
-    id: "6",
-    address: "19950 Beach Rd #4S",
-    city: "Jupiter",
-    state: "FL",
-    zip: "33469",
-    price: 3995000,
-    beds: 3,
-    baths: 3,
-    sqft: 3500,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+6",
-    status: "Pending",
-  },
-  {
-    id: "7",
-    address: "3752 NE 199th St",
-    city: "Aventura",
-    state: "FL",
-    zip: "33180",
-    price: 3995000,
-    beds: 5,
-    baths: 6,
-    sqft: 5218,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+7",
-    status: "new listing",
-  },
-  {
-    id: "8",
-    address: "4286 S Douglas Rd",
-    city: "Miami",
-    state: "FL",
-    zip: "33133",
-    price: 3700000,
-    beds: 5,
-    baths: 5,
-    sqft: 2700,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+8",
-    status: "Active Under Contract",
-  },
-  {
-    id: "9",
-    address: "151 Crandon Blvd #1222",
-    city: "Key Biscayne",
-    state: "FL",
-    zip: "33149",
-    price: 3400000,
-    beds: 4,
-    baths: 3,
-    sqft: 3127,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+9",
-  },
-  {
-    id: "10",
-    address: "17001 Collins Ave #3808",
-    city: "Sunny Isles Beach",
-    state: "FL",
-    zip: "33160",
-    price: 3390000,
-    beds: 4,
-    baths: 4,
-    sqft: 2394,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+10",
-  },
-  {
-    id: "11",
-    address: "19955 NE 38th Ct #1002",
-    city: "Aventura",
-    state: "FL",
-    zip: "33180",
-    price: 3300000,
-    beds: 3,
-    baths: 4,
-    sqft: 2890,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+11",
-  },
-  {
-    id: "12",
-    address: "12510 Ramiro St",
-    city: "Coral Gables",
-    state: "FL",
-    zip: "33156",
-    price: 3249000,
-    beds: 6,
-    baths: 3,
-    sqft: 3350,
-    imageUrl: "https://placehold.co/600x400/333/fff?text=Property+12",
-  },
-];
-
 const CARDS_PER_PAGE_DESKTOP = 3;
 
 const priceFormatter = new Intl.NumberFormat("en-US", {
@@ -173,8 +17,7 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [isFavorited, setIsFavorited] = useState(false);
 
-  // Simulate multiple images per listing (in production these would be real)
-  const images = [listing.imageUrl];
+  const images = listing.photos?.length ? listing.photos : [listing.imageUrl].filter(Boolean);
 
   function handlePrevImage(e: React.MouseEvent) {
     e.preventDefault();
@@ -194,15 +37,23 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
     setIsFavorited((prev) => !prev);
   }
 
+  const currentImage = images[imageIndex] || "";
+
   return (
     <div className="group cursor-pointer bg-white transition-shadow duration-300 hover:shadow-lg">
       {/* Image container */}
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <img
-          src={images[imageIndex]}
-          alt={`${listing.address}, ${listing.city}`}
-          className="h-full w-full object-cover"
-        />
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#eee]">
+        {currentImage ? (
+          <img
+            src={currentImage}
+            alt={`${listing.address}, ${listing.city}`}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="h-full w-full flex items-center justify-center bg-[#f0f0f0]">
+            <span className="text-[#bbb] text-sm">No image available</span>
+          </div>
+        )}
 
         {/* Dark gradient overlay at bottom for price */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
@@ -213,7 +64,7 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
         </span>
 
         {/* Status badge (top-left) */}
-        {listing.status && (
+        {listing.status && listing.status !== "Active" && (
           <span className="absolute top-3 left-3 bg-black px-3 py-1 text-xs font-medium uppercase tracking-wide text-white">
             {listing.status}
           </span>
@@ -286,24 +137,87 @@ function ListingCard({ listing }: { listing: PropertyListing }) {
   );
 }
 
-export function FeaturedListings() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [listings, setListings] = useState<PropertyListing[]>(FALLBACK_LISTINGS);
+/** Shown while the MLS feed is pending broker approval. */
+function PendingApprovalPanel() {
+  return (
+    <div className="mx-auto max-w-2xl text-center py-16 px-6">
+      <div className="w-16 h-16 bg-[#f5f5f5] border border-[#e5e5e5] flex items-center justify-center mx-auto mb-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-7 h-7 text-[#999]"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      </div>
+      <h2 className="text-[24px] font-heading font-normal text-[#333]">
+        MLS Listings Coming Soon
+      </h2>
+      <p className="mt-4 text-[15px] font-sans text-[#666] leading-relaxed max-w-md mx-auto">
+        Live property listings from the MIAMI MLS will appear here once the MLS
+        data feed authorization is complete. In the meantime, I can personally
+        pull any search for you.
+      </p>
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          href="/contact"
+          className="inline-flex items-center justify-center bg-[#333] text-white px-8 py-3 text-[15px] font-sans hover:bg-black transition-colors"
+        >
+          Request a Property Search
+        </Link>
+        <Link
+          href="/contact"
+          className="inline-flex items-center justify-center border border-[#333] text-[#333] px-8 py-3 text-[15px] font-sans hover:bg-[#333] hover:text-white transition-colors"
+        >
+          Contact Jefferson
+        </Link>
+      </div>
+    </div>
+  );
+}
 
-  // Try to fetch live MLS data from Bridge Interactive on mount.
-  // Falls back to the static FALLBACK_LISTINGS if the API is not yet active
-  // (agreement still pending broker signature) or any other error occurs.
+type FeedState = "loading" | "pending" | "live";
+
+export function FeaturedListings() {
+  const [feedState, setFeedState] = useState<FeedState>("loading");
+  const [listings, setListings] = useState<PropertyListing[]>([]);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Attempt to load live MLS data from the Bridge-backed API route.
+  // The route returns 503 with { listings: [], error: "MLS feed pending approval" }
+  // while MLS_FEED_ENABLED is false or creds are missing. We treat any 503 / empty
+  // response as "pending" and show the pending-approval panel.
   useEffect(() => {
     let cancelled = false;
     async function load() {
       try {
         const res = await fetch("/api/listings?source=avanti&limit=12");
-        if (!res.ok) return;
+        if (cancelled) return;
+        if (res.status === 503) {
+          setFeedState("pending");
+          return;
+        }
+        if (!res.ok) {
+          setFeedState("pending");
+          return;
+        }
         const data: { listings?: PropertyListing[] } = await res.json();
-        if (cancelled || !data.listings || data.listings.length === 0) return;
+        if (cancelled) return;
+        if (!data.listings || data.listings.length === 0) {
+          setFeedState("pending");
+          return;
+        }
         setListings(data.listings);
+        setFeedState("live");
       } catch {
-        // Silent fallback. Static listings remain visible.
+        if (!cancelled) setFeedState("pending");
       }
     }
     load();
@@ -312,18 +226,42 @@ export function FeaturedListings() {
     };
   }, []);
 
-  const totalPages = Math.max(1, Math.ceil(listings.length / CARDS_PER_PAGE_DESKTOP));
-
-  function goToPage(page: number) {
-    setCurrentPage(page);
+  // Loading skeleton
+  if (feedState === "loading") {
+    return (
+      <section className="px-4 py-[60px]">
+        <h1 className="mb-10 text-center font-heading text-[32px] font-normal text-[#333]">
+          Featured Listings
+        </h1>
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="animate-pulse bg-[#f0f0f0] h-72" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
   }
 
-  // Get listings for current page (desktop: 3 per page)
+  // Pending approval state
+  if (feedState === "pending") {
+    return (
+      <section className="px-4 py-[60px]">
+        <h1 className="mb-10 text-center font-heading text-[32px] font-normal text-[#333]">
+          Featured Listings
+        </h1>
+        <div className="mx-auto max-w-6xl">
+          <PendingApprovalPanel />
+        </div>
+      </section>
+    );
+  }
+
+  // Live MLS feed
+  const totalPages = Math.max(1, Math.ceil(listings.length / CARDS_PER_PAGE_DESKTOP));
   const startIndex = currentPage * CARDS_PER_PAGE_DESKTOP;
-  const visibleListings = listings.slice(
-    startIndex,
-    startIndex + CARDS_PER_PAGE_DESKTOP
-  );
+  const visibleListings = listings.slice(startIndex, startIndex + CARDS_PER_PAGE_DESKTOP);
 
   return (
     <section className="px-4 py-[60px]">
@@ -342,20 +280,22 @@ export function FeaturedListings() {
         </div>
 
         {/* Pagination dots */}
-        <div className="mt-8 flex items-center justify-center gap-2">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => goToPage(index)}
-              aria-label={`Go to page ${index + 1}`}
-              aria-current={currentPage === index ? "true" : undefined}
-              className={`h-3 w-3 rounded-full border border-[#333] transition-colors ${
-                currentPage === index ? "bg-[#333]" : "bg-transparent"
-              }`}
-            />
-          ))}
-        </div>
+        {totalPages > 1 && (
+          <div className="mt-8 flex items-center justify-center gap-2">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setCurrentPage(index)}
+                aria-label={`Go to page ${index + 1}`}
+                aria-current={currentPage === index ? "true" : undefined}
+                className={`h-3 w-3 rounded-full border border-[#333] transition-colors ${
+                  currentPage === index ? "bg-[#333]" : "bg-transparent"
+                }`}
+              />
+            ))}
+          </div>
+        )}
 
         {/* View All button */}
         <div className="mt-8 flex justify-center">

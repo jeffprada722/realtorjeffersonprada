@@ -21,7 +21,7 @@ export default function DMCAPage() {
             Digital Millennium Copyright Act (DMCA) Notice
           </h1>
           <p className="text-sm text-[#777] mb-10">
-            Last updated: April 2026
+            Last updated: April 26, 2026
           </p>
 
           <div className="space-y-6 text-[16px] leading-[1.7] text-[#333]">
@@ -89,6 +89,11 @@ export default function DMCAPage() {
             <h2 className="text-[22px] font-heading mt-10">
               Designated Copyright Agent
             </h2>
+            <p>
+              Jefferson Alberto Prada Camacho is registered as the Designated
+              Copyright Agent in the U.S. Copyright Office DMCA Designated
+              Agent Directory (registered April 26, 2026).
+            </p>
             <div className="bg-[#f5f5f5] border border-[#e5e5e5] p-6 rounded-sm">
               <p className="font-semibold text-[#333]">Jefferson Prada</p>
               <p>Attn: DMCA Agent</p>

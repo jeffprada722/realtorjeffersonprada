@@ -14,21 +14,34 @@
  *
  * Auth: Bearer token (server token) — server-side only. Never expose
  * BRIDGE_SERVER_TOKEN to the client.
+ *
+ * Gate: This client is inactive until ALL three env vars are present:
+ *   MLS_FEED_ENABLED=true
+ *   BRIDGE_SERVER_TOKEN=<token>
+ *   BRIDGE_DATASET=<dataset-key>
+ * If any is missing, isBridgeConfigured() returns false and no requests
+ * are made to Bridge Interactive.
  */
 
 import type { PropertyListing, ListingFilters } from "@/types";
 
 const BRIDGE_BASE_URL = "https://api.bridgedataoutput.com/api/v2";
 const BRIDGE_SERVER_TOKEN = process.env.BRIDGE_SERVER_TOKEN;
+
 /**
  * Bridge dataset identifier. Each MLS has its own dataset key in Bridge.
- * Look it up in Bridge portal → Data Access tab. For Miami Realtors
- * (SEFMLS) the dataset is typically "mlspin" or a Miami-specific key —
- * verify after agreement is fully executed.
- *
- * Default "miamire" is a placeholder. Override via BRIDGE_DATASET env var.
+ * Look it up in Bridge portal → Data Access tab.
+ * INTENTIONALLY has no default — if BRIDGE_DATASET is not set,
+ * the integration is considered disabled.
  */
-const BRIDGE_DATASET = process.env.BRIDGE_DATASET || "miamire";
+const BRIDGE_DATASET = process.env.BRIDGE_DATASET;
+
+/**
+ * MLS feed kill-switch. Must be explicitly set to "true" in env vars.
+ * Used to prevent any calls to Bridge until the broker agreement is
+ * fully executed and the dataset key is verified.
+ */
+const MLS_FEED_ENABLED = process.env.MLS_FEED_ENABLED === "true";
 
 /**
  * Cache duration in seconds. Per IDX agreement (Schedule A.5),
@@ -40,9 +53,57 @@ const CACHE_TTL_SECONDS = 60 * 60 * 6; // 6 hours
 /** Avanti Way Realty office identifier — Jefferson's brokerage */
 const AVANTI_WAY_OFFICE_NAME = "Avanti Way Realty LLC";
 
-/** Whether the Bridge integration is configured and ready to call. */
+/**
+ * RESO fields requested via $select.
+ * Explicit selection avoids receiving fields we don't need and keeps
+ * the response size small. Extend as display requirements grow.
+ */
+const RESO_SELECT_FIELDS = [
+  "ListingKey",
+  "ListingId",
+  "UnparsedAddress",
+  "StreetNumber",
+  "StreetName",
+  "StreetSuffix",
+  "City",
+  "StateOrProvince",
+  "PostalCode",
+  "ListPrice",
+  "BedroomsTotal",
+  "BathroomsTotalInteger",
+  "BathroomsFull",
+  "LivingArea",
+  "LotSizeSquareFeet",
+  "YearBuilt",
+  "PublicRemarks",
+  "PropertyType",
+  "PropertySubType",
+  "StandardStatus",
+  "MlsStatus",
+  "ListAgentFullName",
+  "ListOfficeName",
+  "Latitude",
+  "Longitude",
+  "ModificationTimestamp",
+  // Seller internet-display restriction fields (IDX compliance)
+  "InternetEntireListingDisplayYN",
+  "InternetAddressDisplayYN",
+  "InternetAutomatedValuationDisplayYN",
+  "InternetConsumerCommentYN",
+  "Media",
+].join(",");
+
+/**
+ * Whether the Bridge integration is fully configured and permitted to run.
+ * Returns true only when MLS_FEED_ENABLED=true AND both token and dataset
+ * are present.
+ */
 export function isBridgeConfigured(): boolean {
-  return Boolean(BRIDGE_SERVER_TOKEN && BRIDGE_DATASET);
+  return (
+    MLS_FEED_ENABLED === true &&
+    Boolean(BRIDGE_SERVER_TOKEN) &&
+    Boolean(BRIDGE_DATASET)
+  );
 }
 
 /** RESO Web API Property record (subset of fields we use). */
@@ -74,6 +135,13 @@ interface ResoProperty {
   Longitude?: number;
   ModificationTimestamp?: string;
   Media?: Array<{ MediaURL?: string; Order?: number }>;
+  // Seller internet-display restriction fields
+  // TODO: Confirm field names with Bridge support once feed is active.
+  // These follow RESO standard naming but Bridge may return them differently.
+  InternetEntireListingDisplayYN?: boolean;
+  InternetAddressDisplayYN?: boolean;
+  InternetAutomatedValuationDisplayYN?: boolean;
+  InternetConsumerCommentYN?: boolean;
 }
 
 interface ResoCollectionResponse {
@@ -94,11 +162,43 @@ function mapStatus(status?: string): PropertyListing["status"] {
 }
 
 /**
+ * Apply seller internet-display restrictions per RESO standard fields.
+ *
+ * Rules (conservative defaults when fields are absent):
+ *   InternetEntireListingDisplayYN: if explicitly false → skip listing entirely (return null)
+ *   InternetAddressDisplayYN: if explicitly false → mask address
+ *
+ * TODO: Once feed is active, verify Bridge returns these fields and test
+ * with real listings to confirm the field values and behavior.
+ */
+function applyDisplayRestrictions(
+  p: ResoProperty,
+  listing: PropertyListing
+): PropertyListing | null {
+  // Do not display listings where seller has opted out of internet display
+  if (p.InternetEntireListingDisplayYN === false) {
+    return null;
+  }
+
+  // Mask address if seller opted out of address display
+  if (p.InternetAddressDisplayYN === false) {
+    return {
+      ...listing,
+      address: "Address available upon request",
+    };
+  }
+
+  return listing;
+}
+
+/**
  * Format a RESO Property record into our PropertyListing shape.
  * Sets `listingCourtesy` only when the office is NOT Avanti Way Realty,
  * per the IDX agreement attribution rule (Schedule A point 9).
+ *
+ * Returns null if the listing should not be displayed (internet-display restrictions).
  */
-function toPropertyListing(p: ResoProperty): PropertyListing {
+function toPropertyListing(p: ResoProperty): PropertyListing | null {
   const sortedMedia = (p.Media || [])
     .filter((m) => Boolean(m.MediaURL))
     .sort((a, b) => (a.Order ?? 0) - (b.Order ?? 0))
@@ -111,10 +211,10 @@ function toPropertyListing(p: ResoProperty): PropertyListing {
   const isAvantiWay =
     p.ListOfficeName?.toLowerCase().includes("avanti way") ?? false;
 
-  return {
+  const listing: PropertyListing = {
     id: p.ListingKey,
     mlsNumber: p.ListingId,
-    address: address || "Address available on request",
+    address: address || "Address available upon request",
     city: p.City || "",
     state: p.StateOrProvince || "FL",
     zip: p.PostalCode || "",
@@ -134,6 +234,8 @@ function toPropertyListing(p: ResoProperty): PropertyListing {
     longitude: p.Longitude,
     modificationTimestamp: p.ModificationTimestamp,
   };
+
+  return applyDisplayRestrictions(p, listing);
 }
 
 /**
@@ -193,7 +295,7 @@ export class BridgeApiError extends Error {
 async function bridgeFetch<T>(path: string, init: RequestInit = {}): Promise<T> {
   if (!isBridgeConfigured()) {
     throw new BridgeApiError(
-      "Bridge Interactive not configured. Set BRIDGE_SERVER_TOKEN and BRIDGE_DATASET env vars.",
+      "Bridge Interactive not configured. Set MLS_FEED_ENABLED=true, BRIDGE_SERVER_TOKEN, and BRIDGE_DATASET env vars.",
       500,
       path
     );
@@ -226,6 +328,7 @@ async function bridgeFetch<T>(path: string, init: RequestInit = {}): Promise<T> 
 /**
  * Fetch active listings from the MLS via Bridge Interactive.
  * Returns at most `limit` results (default 12, max 100).
+ * Filters out listings with InternetEntireListingDisplayYN === false.
  */
 export async function fetchListings(
   filters: ListingFilters = {}
@@ -238,13 +341,16 @@ export async function fetchListings(
     $top: String(limit),
     $skip: String(offset),
     $orderby: "ListPrice desc",
+    $select: RESO_SELECT_FIELDS,
   });
 
   const data = await bridgeFetch<ResoCollectionResponse>(
     `/Property?${params.toString()}`
   );
 
-  return data.value.map(toPropertyListing);
+  return data.value
+    .map(toPropertyListing)
+    .filter((l): l is PropertyListing => l !== null);
 }
 
 /**
@@ -258,13 +364,16 @@ export async function fetchAvantiWayListings(
     $filter: `StandardStatus eq 'Active' and ListOfficeName eq '${escapeOData(AVANTI_WAY_OFFICE_NAME)}'`,
     $top: String(limit),
     $orderby: "ModificationTimestamp desc",
+    $select: RESO_SELECT_FIELDS,
   });
 
   const data = await bridgeFetch<ResoCollectionResponse>(
     `/Property?${params.toString()}`
   );
 
-  return data.value.map(toPropertyListing);
+  return data.value
+    .map(toPropertyListing)
+    .filter((l): l is PropertyListing => l !== null);
 }
 
 /** Fetch a single listing by ListingKey. Returns null if not found. */
@@ -272,7 +381,9 @@ export async function fetchListingById(
   id: string
 ): Promise<PropertyListing | null> {
   try {
-    const data = await bridgeFetch<ResoProperty>(`/Property/${encodeURIComponent(id)}`);
+    const data = await bridgeFetch<ResoProperty>(
+      `/Property/${encodeURIComponent(id)}?$select=${encodeURIComponent(RESO_SELECT_FIELDS)}`
+    );
     return toPropertyListing(data);
   } catch (err) {
     if (err instanceof BridgeApiError && err.status === 404) {

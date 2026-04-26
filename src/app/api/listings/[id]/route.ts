@@ -21,12 +21,12 @@ export async function GET(
   if (!isBridgeConfigured()) {
     return NextResponse.json(
       {
-        error: "Bridge Interactive integration is not yet active.",
         listing: null,
+        error: "MLS feed pending approval",
       },
       {
         status: 503,
-        headers: { "X-Robots-Tag": "noindex" },
+        headers: { "X-Robots-Tag": "noindex, nofollow" },
       }
     );
   }

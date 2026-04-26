@@ -64,8 +64,8 @@ export default function SearchPage() {
               Find Your Property
             </h1>
             <p className="mt-3 text-[17px] text-white/70 font-sans max-w-lg">
-              Search across Miami, South Florida, and the full MIAMI MLS. Filter
-              by neighborhood, price, type, and more.
+              Tell me what you&apos;re looking for and I&apos;ll search the full
+              MIAMI MLS personally. Filter by neighborhood, price, type, and more.
             </p>
           </div>
         </section>
@@ -224,12 +224,15 @@ export default function SearchPage() {
               </div>
 
               {/* Submit */}
-              <div className="sm:col-span-2 lg:col-span-4 flex justify-end">
+              <div className="sm:col-span-2 lg:col-span-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <p className="text-[12px] text-[#999] font-sans">
+                  Your criteria will be sent to Jefferson, who will run a full MLS search personally.
+                </p>
                 <Link
                   href="/contact"
-                  className="bg-[#333] text-white px-10 py-3 text-[15px] font-sans hover:bg-black transition-colors"
+                  className="flex-shrink-0 bg-[#333] text-white px-10 py-3 text-[15px] font-sans hover:bg-black transition-colors"
                 >
-                  Search Properties
+                  Request a Property Search
                 </Link>
               </div>
             </form>

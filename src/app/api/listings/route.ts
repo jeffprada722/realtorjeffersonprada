@@ -16,6 +16,7 @@
  *
  * IDX compliance:
  *   - Server-side only — never exposes BRIDGE_SERVER_TOKEN to the browser
+ *   - Only active when MLS_FEED_ENABLED=true + BRIDGE_SERVER_TOKEN + BRIDGE_DATASET
  *   - Cache revalidates every 6h (well under the 24h IDX agreement minimum)
  *   - X-Robots-Tag header blocks indexing of raw JSON
  */
@@ -37,19 +38,23 @@ function parseNumber(value: string | null): number | undefined {
   return Number.isFinite(n) ? n : undefined;
 }
 
+const NOINDEX_HEADERS = {
+  "X-Robots-Tag": "noindex, nofollow",
+} as const;
+
 export async function GET(request: NextRequest) {
   if (!isBridgeConfigured()) {
     return NextResponse.json(
       {
-        error: "Bridge Interactive integration is not yet active.",
-        reason:
-          "The Member Data License Agreement is pending broker signature. Listings will appear once the agreement is fully executed.",
         listings: [],
+        error: "MLS feed pending approval",
+        reason:
+          "The MLS_FEED_ENABLED flag is not set, or BRIDGE_SERVER_TOKEN / BRIDGE_DATASET are missing. The Member Data License Agreement must be fully executed before enabling the feed.",
       },
       {
         status: 503,
         headers: {
-          "X-Robots-Tag": "noindex",
+          ...NOINDEX_HEADERS,
           "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
         },
       }
@@ -81,8 +86,9 @@ export async function GET(request: NextRequest) {
       { listings, count: listings.length },
       {
         headers: {
-          "X-Robots-Tag": "noindex",
-          "Cache-Control": "public, s-maxage=21600, stale-while-revalidate=86400",
+          ...NOINDEX_HEADERS,
+          "Cache-Control":
+            "public, s-maxage=21600, stale-while-revalidate=86400",
         },
       }
     );
@@ -92,11 +98,8 @@ export async function GET(request: NextRequest) {
       err instanceof Error ? err.message : "Unknown error fetching listings";
 
     return NextResponse.json(
-      { error: message, listings: [] },
-      {
-        status,
-        headers: { "X-Robots-Tag": "noindex" },
-      }
+      { listings: [], error: message },
+      { status, headers: NOINDEX_HEADERS }
     );
   }
 }
