@@ -24,7 +24,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://realtorjeffersonprada.com"),
+  metadataBase: new URL("https://www.realtorjeffersonprada.com"),
   title: "Jefferson Prada | Realtor Miami - Avanti Way",
   description:
     "Economist & Real Estate Sales Associate in Miami, FL. Specialist in financial analysis for real estate investments. Avanti Way Realty. Call (786) 616-6307.",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://realtorjeffersonprada.com",
+    url: "https://www.realtorjeffersonprada.com",
     siteName: "Jefferson Prada Real Estate",
     title: "Jefferson Prada | Economist & Realtor Miami - Avanti Way",
     description:
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     apple: "/seo/favicon.png",
   },
   alternates: {
-    canonical: "https://realtorjeffersonprada.com",
+    canonical: "https://www.realtorjeffersonprada.com",
   },
   other: {
     "geo.region": "US-FL",

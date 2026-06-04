@@ -1,6 +1,6 @@
 import type { BlogPost } from "./blog";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://realtorjeffersonprada.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.realtorjeffersonprada.com";
 
 export const organizationSchema = {
   "@context": "https://schema.org",
