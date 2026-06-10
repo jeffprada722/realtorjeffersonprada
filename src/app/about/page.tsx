@@ -179,6 +179,11 @@ export default function AboutPage() {
                   financial decision most people ever make. It deserves a strategy,
                   not just a tour and a gut feeling.
                 </p>
+                <p>
+                  I am a licensed Real Estate Sales Associate in Florida
+                  (License #SL3643823) with Avanti Way Realty, serving buyers,
+                  sellers, and investors across the Miami area.
+                </p>
               </div>
 
               <div className="mt-8 flex gap-4 flex-wrap">
@@ -331,8 +336,9 @@ export default function AboutPage() {
             />
             <div className="hidden md:block h-10 w-px bg-[#ddd]" />
             <p className="text-[14px] font-sans text-[#777] text-center max-w-sm">
-              Licensed Real Estate Sales Associate at Avanti Way Realty. Member
-              of the MIAMI Association of Realtors.
+              Licensed Real Estate Sales Associate at Avanti Way Realty,
+              Florida License #SL3643823. Member of the MIAMI Association of
+              Realtors.
             </p>
           </div>
         </section>

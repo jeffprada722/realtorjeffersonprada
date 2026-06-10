@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Search homes, condos, and investment properties for sale and for rent in Miami, Brickell, Coral Gables, Coconut Grove, and South Florida. Jefferson Prada, Avanti Way Realty.",
   alternates: { canonical: "/search" },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Search Properties Miami | Jefferson Prada Realtor",
     description:

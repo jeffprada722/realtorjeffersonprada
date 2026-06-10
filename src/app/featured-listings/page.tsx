@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description:
     "Browse featured property listings in Miami, Brickell, Coral Gables, Key Biscayne, Aventura, and South Florida. Jefferson Prada, Avanti Way Realty. Call (786) 616-6307.",
   alternates: { canonical: "/featured-listings" },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Featured Listings Miami | Jefferson Prada Realtor",
     description:

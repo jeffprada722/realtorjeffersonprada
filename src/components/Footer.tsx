@@ -78,7 +78,11 @@ export function Footer() {
         </div>
 
         {/* Legal text */}
-        <div className="mt-8 border-t border-white/10 pt-4">
+        <div className="mt-8 border-t border-white/10 pt-4 space-y-2">
+          <p className="text-[12px] text-white/80 leading-relaxed">
+            Jefferson Prada, Florida Real Estate License #SL3643823 | Avanti
+            Way Realty LLC
+          </p>
           <p className="text-[12px] text-white/60 leading-relaxed">
             Jefferson Prada is a licensed real estate agent affiliated with
             Avanti Way. Avanti Way is a licensed real estate broker and abides
