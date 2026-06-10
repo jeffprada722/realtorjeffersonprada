@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "100+", label: "Clients Served" },
-  { value: "$50M+", label: "In Transactions" },
-  { value: "5+", label: "Years in Miami" },
+  { value: "EN/ES/PT", label: "Bilingual Service" },
+  { value: "Avanti Way", label: "Licensed Brokerage" },
+  { value: "Miami", label: "Local Market Focus" },
 ];
 
 const METHOD = [
